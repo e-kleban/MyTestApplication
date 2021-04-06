@@ -6,13 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/dz2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="25dp"
+        android:backgroundTint="#074741"
+        android:text="@string/dz2"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <Button
+        android:id="@+id/dz3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:backgroundTint="#074741"
+        android:text="@string/dz3"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/dz2" />
+
+    <Button
+        android:id="@+id/dz4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:backgroundTint="#074741"
+        android:text="@string/dz4"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/dz3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
