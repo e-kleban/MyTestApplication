@@ -13,8 +13,8 @@ class CatAnimationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cat_animation)
 
         val catImage = findViewById<ImageView>(R.id.img_cat_animation)
-        catImage.setBackgroundResource(R.drawable.animation_cat)
-        val catAnimation = catImage.background as AnimationDrawable
+        catImage.setImageResource(R.drawable.animation_cat)
+        val catAnimation = catImage.drawable as AnimationDrawable
         catAnimation.start()
     }
 }
