@@ -10,6 +10,7 @@ import com.squareup.picasso.Picasso
 
 
 class ImageUploadActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image_upload)

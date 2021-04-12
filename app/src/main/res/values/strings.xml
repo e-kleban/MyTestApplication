@@ -5,4 +5,6 @@
     <string name="dz3">homework3</string>
     <string name="button_upload_image">Upload image</string>
     <string name="hint_input_URL">Input URL</string>
+    <string name="button_flags">Flags</string>
+    <string name="button_animation">Animation</string>
 </resources>
