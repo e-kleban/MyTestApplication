@@ -16,8 +16,8 @@ class ImageUploadActivity : AppCompatActivity() {
         setContentView(R.layout.activity_image_upload)
 
         val buttonClick = findViewById<Button>(R.id.button_upload)
-        val inputField = findViewById<EditText>(R.id.uri_text)
-        val imageView = findViewById<ImageView>(R.id.image_view)
+        val inputField = findViewById<EditText>(R.id.edt_image_input)
+        val imageView = findViewById<ImageView>(R.id.imv_image)
 
         buttonClick.setOnClickListener {
             if (inputField.text.isNullOrEmpty()) {

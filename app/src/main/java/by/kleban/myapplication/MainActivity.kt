@@ -15,11 +15,13 @@ class MainActivity : AppCompatActivity() {
         val buttonDz2 = findViewById<Button>(R.id.dz2)
 
         buttonDz1.setOnClickListener {
-            startActivity(Intent(this, ImageUploadActivity::class.java))
+            val intent = Intent(this, ImageUploadActivity::class.java)
+            startActivity(intent)
         }
 
         buttonDz2.setOnClickListener {
-            startActivity(Intent(this, FlagsAnimationActivity::class.java))
+            val intent = Intent(this, FlagsAnimationActivity::class.java)
+            startActivity(intent)
         }
     }
 }

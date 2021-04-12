@@ -5,21 +5,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Button
-        android:id="@+id/button_flags"
+        android:id="@+id/btn_flags"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button_animation"
+        app:layout_constraintBottom_toTopOf="@+id/btn_animation"
         android:layout_margin="@dimen/margin_double"
         android:textSize="@dimen/text_size_24sp"
         android:text="@string/button_flags"/>
 
     <Button
-        android:id="@+id/button_animation"
+        android:id="@+id/btn_animation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_double"
-        app:layout_constraintTop_toBottomOf="@+id/button_flags"
+        app:layout_constraintTop_toBottomOf="@+id/btn_flags"
         android:textSize="@dimen/text_size_24sp"
         android:text="@string/button_animation"/>
 
