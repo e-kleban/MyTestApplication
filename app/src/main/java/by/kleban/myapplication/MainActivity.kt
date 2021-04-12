@@ -12,10 +12,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val buttonDz1 = findViewById<Button>(R.id.dz1)
+        val buttonDz2 = findViewById<Button>(R.id.dz2)
 
         buttonDz1.setOnClickListener {
-
             startActivity(Intent(this, ImageUploadActivity::class.java))
+        }
+
+        buttonDz2.setOnClickListener {
+            startActivity(Intent(this, FlagsAnimationActivity::class.java))
         }
     }
 }

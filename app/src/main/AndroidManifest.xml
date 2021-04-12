@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ImageUploadActivity"/>
+        <activity android:name=".FlagsAnimationActivity"/>
     </application>
 
 </manifest>
