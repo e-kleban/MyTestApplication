@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/dz1"
@@ -15,7 +13,7 @@
         android:layout_marginEnd="@dimen/margin_double"
         android:layout_marginBottom="@dimen/margin_8dp"
         android:text="@string/dz1"
-        android:textSize="@dimen/text_size"
+        android:textSize="@dimen/text_size_24sp"
         app:layout_constraintBottom_toTopOf="@id/dz2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0"
@@ -29,7 +27,7 @@
         android:layout_marginEnd="@dimen/margin_double"
         android:layout_marginBottom="@dimen/margin_8dp"
         android:text="@string/dz2"
-        android:textSize="@dimen/text_size"
+        android:textSize="@dimen/text_size_24sp"
         app:layout_constraintBottom_toTopOf="@id/dz3"
         app:layout_constraintTop_toBottomOf="@id/dz1" />
 
@@ -40,7 +38,7 @@
         android:layout_marginStart="@dimen/margin_double"
         android:layout_marginEnd="@dimen/margin_double"
         android:text="@string/dz3"
-        android:textSize="@dimen/text_size"
+        android:textSize="@dimen/text_size_24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dz2" />
 
