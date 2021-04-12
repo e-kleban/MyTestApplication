@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginBottom="@dimen/margin_double"
+        android:text="@string/upload_image"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/uri_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:background="#310774B6"
+        android:hint="@string/text_help"
+        android:inputType="textUri"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/button_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="https://s2.best-wallpaper.net/Blue-petals-flowers-butterfly_iphone_1080x1920.jpg" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginTop="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/uri_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/blue_petals_flowers" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

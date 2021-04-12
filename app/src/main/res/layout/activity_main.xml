@@ -7,35 +7,41 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/dz1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginTop="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:text="@string/dz1"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@id/dz2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
         android:id="@+id/dz2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:backgroundTint="#074741"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginBottom="@dimen/margin_8dp"
         android:text="@string/dz2"
-        android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="25dp" />
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@id/dz3"
+        app:layout_constraintTop_toBottomOf="@id/dz1" />
 
     <Button
         android:id="@+id/dz3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:backgroundTint="#074741"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
         android:text="@string/dz3"
-        android:textSize="30sp"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dz2" />
-
-    <Button
-        android:id="@+id/dz4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:backgroundTint="#074741"
-        android:text="@string/dz4"
-        android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@id/dz3" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

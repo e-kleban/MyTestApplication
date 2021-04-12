@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="dz1">homework1</string>
     <string name="dz2">homework2</string>
     <string name="dz3">homework3</string>
-    <string name="dz4">homework4</string>
+    <string name="upload_image">Загрузить изображение</string>
+    <string name="text_help">Введите URL</string>
 </resources>
