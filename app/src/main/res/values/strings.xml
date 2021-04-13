@@ -7,4 +7,10 @@
     <string name="hint_input_URL">Input URL</string>
     <string name="button_flags">Flags</string>
     <string name="button_animation">Animation</string>
+    <string name="txt_flags_armenia">Armenia</string>
+    <string name="txt_flags_austria">Austria</string>
+    <string name="txt_flags_belgium">Belgium</string>
+    <string name="txt_flags_latvia">Latvia</string>
+    <string name="txt_flags_spain">Spain</string>
+    <string name="txt_flags_denmark">Denmark</string>
 </resources>
