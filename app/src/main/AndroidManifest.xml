@@ -18,6 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ImageUploadActivity"/>
+        <activity android:name=".FlagsAnimationActivity"/>
+        <activity android:name=".CatAnimationActivity"/>
+        <activity android:name=".FlagsActivity"/>
     </application>
 
 </manifest>

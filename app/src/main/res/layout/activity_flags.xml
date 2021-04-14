@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txt_flags_armenia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/txt_flags_armenia"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24sp"
+            app:layout_constraintBottom_toTopOf="@id/img_flags_red_armenia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_flags_red_armenia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#FF0000"
+            app:layout_constraintBottom_toTopOf="@id/img_flags_blue_armenia"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintTop_toBottomOf="@id/txt_flags_armenia" />
+
+        <ImageView
+            android:id="@+id/img_flags_blue_armenia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#3366CC"
+            app:layout_constraintBottom_toTopOf="@id/img_flags_orange_armenia"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_red_armenia" />
+
+        <ImageView
+            android:id="@+id/img_flags_orange_armenia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#FF6600"
+            app:layout_constraintBottom_toTopOf="@id/txt_flags_austria"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_blue_armenia" />
+
+        <TextView
+            android:id="@+id/txt_flags_austria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/txt_flags_austria"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24sp"
+            app:layout_constraintBottom_toTopOf="@id/img_flags_red_austria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_orange_armenia" />
+
+        <ImageView
+            android:id="@+id/img_flags_red_austria"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#ED2939"
+            app:layout_constraintBottom_toTopOf="@id/img_flags_white_austria"
+            app:layout_constraintDimensionRatio="9:2"
+            app:layout_constraintTop_toBottomOf="@id/txt_flags_austria" />
+
+        <ImageView
+            android:id="@+id/img_flags_white_austria"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/img_flags_red_austria2"
+            app:layout_constraintDimensionRatio="9:2"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_red_austria2"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <ImageView
+            android:id="@+id/img_flags_red_austria2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#ED2939"
+            app:layout_constraintDimensionRatio="9:2"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_white_austria"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/txt_flags_belgium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double"
+            android:text="@string/txt_flags_belgium"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24sp"
+            app:layout_constraintBottom_toTopOf="@id/img_flags_yellow_belgium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_red_austria2" />
+
+        <ImageView
+            android:id="@+id/img_flags_black_belgium"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:src="#000000"
+            app:layout_constraintDimensionRatio="5:13"
+            app:layout_constraintEnd_toStartOf="@id/img_flags_yellow_belgium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_flags_belgium" />
+
+        <ImageView
+            android:id="@+id/img_flags_yellow_belgium"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#FDDA24"
+            app:layout_constraintDimensionRatio="5:13"
+            app:layout_constraintEnd_toStartOf="@id/img_flags_red_belgium"
+            app:layout_constraintStart_toEndOf="@id/img_flags_black_belgium"
+            app:layout_constraintTop_toTopOf="@id/img_flags_black_belgium" />
+
+        <ImageView
+            android:id="@+id/img_flags_red_belgium"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#D62612"
+            app:layout_constraintDimensionRatio="5:13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_flags_yellow_belgium"
+            app:layout_constraintTop_toTopOf="@id/img_flags_black_belgium" />
+
+        <TextView
+            android:id="@+id/txt_flags_latvia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double"
+            android:text="@string/txt_flags_latvia"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_yellow_belgium" />
+
+        <ImageView
+            android:id="@+id/img_flags_dark_red_latvia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:src="#9E3039"
+            app:layout_constraintDimensionRatio="10:2"
+            app:layout_constraintTop_toBottomOf="@id/txt_flags_latvia" />
+
+        <ImageView
+            android:id="@+id/img_flags_white_latvia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#FFFFFF"
+            app:layout_constraintDimensionRatio="10:1"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_dark_red_latvia" />
+
+        <ImageView
+            android:id="@+id/img_flags_dark_red_latvia2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#9E3039"
+            app:layout_constraintDimensionRatio="10:2"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_white_latvia" />
+
+        <TextView
+            android:id="@+id/txt_flags_spain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double"
+            android:text="@string/txt_flags_spain"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_dark_red_latvia2" />
+
+        <ImageView
+            android:id="@+id/img_flags_dark_red_spain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:src="#AA151B"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintTop_toBottomOf="@id/txt_flags_spain" />
+
+        <ImageView
+            android:id="@+id/img_flags_yellow_spain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#F1BF00"
+            app:layout_constraintDimensionRatio="6:2"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_dark_red_spain" />
+
+        <ImageView
+            android:id="@+id/img_flags_dark_red_spain2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="#AA151B"
+            app:layout_constraintDimensionRatio="6:1"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_yellow_spain" />
+
+
+        <TextView
+            android:id="@+id/txt_flags_denmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double"
+            android:text="@string/txt_flags_denmark"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_flags_dark_red_spain2" />
+
+        <ImageView
+            android:id="@+id/img_denmark_red_left_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#C60C30"
+            app:layout_constraintBottom_toTopOf="@id/img_denmark_white_left_middle"
+            app:layout_constraintDimensionRatio="12:12"
+            app:layout_constraintEnd_toStartOf="@id/img_denmark_white_top_middle"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_denmark_white_top_middle"
+            app:layout_constraintVertical_weight="3" />
+
+        <ImageView
+            android:id="@+id/img_denmark_white_left_middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/img_denmark_red_left_bottom"
+            app:layout_constraintDimensionRatio="12:4"
+            app:layout_constraintEnd_toStartOf="@id/img_denmark_white_middle"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_denmark_red_left_top"
+            app:layout_constraintVertical_weight="1" />
+
+        <ImageView
+            android:id="@+id/img_denmark_red_left_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#C60C30"
+            app:layout_constraintDimensionRatio="12:12"
+            app:layout_constraintEnd_toStartOf="@id/img_denmark_white_bottom_middle"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_denmark_white_left_middle"
+            app:layout_constraintVertical_weight="3" />
+
+        <ImageView
+            android:id="@+id/img_denmark_white_top_middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:src="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/img_denmark_white_middle"
+            app:layout_constraintDimensionRatio="4:12"
+            app:layout_constraintEnd_toStartOf="@id/img_denmark_red_right_top"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/img_denmark_red_left_top"
+            app:layout_constraintTop_toBottomOf="@id/txt_flags_denmark"
+            app:layout_constraintVertical_weight="3" />
+
+        <ImageView
+            android:id="@+id/img_denmark_white_middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/img_denmark_white_bottom_middle"
+            app:layout_constraintDimensionRatio="4:4"
+            app:layout_constraintEnd_toStartOf="@id/img_denmark_white_right_middle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/img_denmark_white_left_middle"
+            app:layout_constraintTop_toBottomOf="@id/img_denmark_white_top_middle"
+            app:layout_constraintVertical_weight="1" />
+
+        <ImageView
+            android:id="@+id/img_denmark_white_bottom_middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#FFFFFF"
+            app:layout_constraintDimensionRatio="4:12"
+            app:layout_constraintEnd_toStartOf="@id/img_denmark_red_right_bottom"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/img_denmark_red_left_bottom"
+            app:layout_constraintTop_toBottomOf="@id/img_denmark_white_middle"
+            app:layout_constraintVertical_weight="3" />
+
+        <ImageView
+            android:id="@+id/img_denmark_red_right_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#C60C30"
+            app:layout_constraintBottom_toTopOf="@id/img_denmark_white_right_middle"
+            app:layout_constraintDimensionRatio="21:12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="5.25"
+            app:layout_constraintStart_toEndOf="@id/img_denmark_white_top_middle"
+            app:layout_constraintTop_toTopOf="@id/img_denmark_white_top_middle"
+            app:layout_constraintVertical_weight="3" />
+
+        <ImageView
+            android:id="@+id/img_denmark_white_right_middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/img_denmark_red_right_bottom"
+            app:layout_constraintDimensionRatio="21:4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="5.25"
+            app:layout_constraintStart_toEndOf="@id/img_denmark_white_middle"
+            app:layout_constraintTop_toBottomOf="@id/img_denmark_red_right_top"
+            app:layout_constraintVertical_weight="1" />
+
+        <ImageView
+            android:id="@+id/img_denmark_red_right_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#C60C30"
+            app:layout_constraintDimensionRatio="21:12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="5.25"
+            app:layout_constraintStart_toEndOf="@id/img_denmark_white_bottom_middle"
+            app:layout_constraintTop_toBottomOf="@id/img_denmark_white_right_middle"
+            app:layout_constraintVertical_weight="3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

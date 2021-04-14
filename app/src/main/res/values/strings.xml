@@ -3,6 +3,14 @@
     <string name="dz1">homework1</string>
     <string name="dz2">homework2</string>
     <string name="dz3">homework3</string>
-    <string name="upload_image">Загрузить изображение</string>
-    <string name="text_help">Введите URL</string>
+    <string name="button_upload_image">Upload image</string>
+    <string name="hint_input_URL">Input URL</string>
+    <string name="button_flags">Flags</string>
+    <string name="button_animation">Animation</string>
+    <string name="txt_flags_armenia">Armenia</string>
+    <string name="txt_flags_austria">Austria</string>
+    <string name="txt_flags_belgium">Belgium</string>
+    <string name="txt_flags_latvia">Latvia</string>
+    <string name="txt_flags_spain">Spain</string>
+    <string name="txt_flags_denmark">Denmark</string>
 </resources>

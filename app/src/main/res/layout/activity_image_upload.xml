@@ -12,23 +12,23 @@
         android:layout_marginStart="@dimen/margin_double"
         android:layout_marginEnd="@dimen/margin_double"
         android:layout_marginBottom="@dimen/margin_double"
-        android:text="@string/upload_image"
-        android:textSize="@dimen/text_size"
+        android:text="@string/button_upload_image"
+        android:textSize="@dimen/text_size_24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/uri_text"
+        android:id="@+id/edt_image_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_double"
         android:layout_marginEnd="@dimen/margin_double"
         android:background="#310774B6"
-        android:hint="@string/text_help"
+        android:hint="@string/hint_input_URL"
         android:inputType="textUri"
         android:singleLine="true"
-        android:textSize="@dimen/text_size"
+        android:textSize="@dimen/text_size_24sp"
         app:layout_constraintBottom_toTopOf="@+id/button_upload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,7 +36,7 @@
         tools:text="https://s2.best-wallpaper.net/Blue-petals-flowers-butterfly_iphone_1080x1920.jpg" />
 
     <ImageView
-        android:id="@+id/image_view"
+        android:id="@+id/imv_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/margin_double"
@@ -44,7 +44,7 @@
         android:layout_marginEnd="@dimen/margin_double"
         android:layout_marginBottom="@dimen/margin_8dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/uri_text"
+        app:layout_constraintBottom_toTopOf="@+id/edt_image_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
