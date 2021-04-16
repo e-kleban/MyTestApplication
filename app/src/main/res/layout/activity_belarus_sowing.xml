@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_sowing_brest_region"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_double"
+        android:background="@color/blue_500"
+        android:gravity="center_horizontal"
+        android:text="@string/txt_brest_region"
+        android:textSize="@dimen/text_size_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_brest_potatoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:background="#751565C0"
+        android:layout_weight="1"
+        android:text="@string/potatoes_area_in_hectares"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_brest_beet"
+        app:layout_constraintStart_toStartOf="@id/txt_sowing_brest_region"
+        app:layout_constraintTop_toBottomOf="@id/txt_sowing_brest_region" />
+
+    <TextView
+        android:id="@+id/txt_brest_beet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#751565C0"
+        android:gravity="center"
+        android:text="@string/beet_area_in_hectares"
+        app:layout_constraintEnd_toStartOf="@id/txt_brest_cabbage"
+        app:layout_constraintStart_toEndOf="@id/txt_brest_potatoes"
+        app:layout_constraintTop_toTopOf="@id/txt_brest_potatoes" />
+
+    <TextView
+        android:id="@+id/txt_brest_cabbage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#751565C0"
+        android:gravity="center"
+        android:text="@string/cabbage_area_in_hectares"
+        app:layout_constraintEnd_toEndOf="@id/txt_sowing_brest_region"
+        app:layout_constraintStart_toEndOf="@id/txt_brest_beet"
+        app:layout_constraintTop_toTopOf="@id/txt_brest_potatoes" />
+
+    <TextView
+        android:id="@+id/txt_sowing_brest_number_potato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_sowing_brest_number_beet"
+        app:layout_constraintStart_toStartOf="@id/txt_sowing_brest_region"
+        app:layout_constraintTop_toBottomOf="@id/txt_brest_potatoes"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/txt_sowing_brest_number_beet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_sowing_brest_number_cabbage"
+        app:layout_constraintStart_toEndOf="@id/txt_sowing_brest_number_potato"
+        app:layout_constraintTop_toTopOf="@id/txt_sowing_brest_number_potato"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/txt_sowing_brest_number_cabbage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/txt_sowing_brest_region"
+        app:layout_constraintStart_toEndOf="@id/txt_sowing_brest_number_beet"
+        app:layout_constraintTop_toTopOf="@id/txt_sowing_brest_number_potato"
+        tools:text="300" />
+
+
+
+
+    <TextView
+        android:id="@+id/txt_sowing_minsk_region"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_500"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/txt_minsk_region"
+        android:textSize="@dimen/text_size_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_sowing_brest_number_beet"  />
+
+    <TextView
+        android:id="@+id/txt_minsk_potatoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:background="#751565C0"
+        android:layout_weight="1"
+        android:text="@string/potatoes_area_in_hectares"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_minsk_beet"
+        app:layout_constraintStart_toStartOf="@id/txt_sowing_minsk_region"
+        app:layout_constraintTop_toBottomOf="@id/txt_sowing_minsk_region" />
+
+    <TextView
+        android:id="@+id/txt_minsk_beet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#751565C0"
+        android:gravity="center"
+        android:text="@string/beet_area_in_hectares"
+        app:layout_constraintEnd_toStartOf="@id/txt_minsk_cabbage"
+        app:layout_constraintStart_toEndOf="@id/txt_minsk_potatoes"
+        app:layout_constraintTop_toTopOf="@id/txt_minsk_potatoes" />
+
+    <TextView
+        android:id="@+id/txt_minsk_cabbage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#751565C0"
+        android:gravity="center"
+        android:text="@string/cabbage_area_in_hectares"
+        app:layout_constraintEnd_toEndOf="@id/txt_sowing_minsk_region"
+        app:layout_constraintStart_toEndOf="@id/txt_minsk_beet"
+        app:layout_constraintTop_toTopOf="@id/txt_minsk_potatoes" />
+
+    <TextView
+        android:id="@+id/txt_sowing_minsk_number_potato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_sowing_minsk_number_beet"
+        app:layout_constraintStart_toStartOf="@id/txt_sowing_minsk_region"
+        app:layout_constraintTop_toBottomOf="@id/txt_minsk_potatoes"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/txt_sowing_minsk_number_beet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_sowing_minsk_number_cabbage"
+        app:layout_constraintStart_toEndOf="@id/txt_sowing_minsk_number_potato"
+        app:layout_constraintTop_toTopOf="@id/txt_sowing_minsk_number_potato"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/txt_sowing_minsk_number_cabbage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/txt_sowing_minsk_region"
+        app:layout_constraintStart_toEndOf="@id/txt_sowing_minsk_number_beet"
+        app:layout_constraintTop_toTopOf="@id/txt_sowing_minsk_number_potato"
+        tools:text="300" />
+
+
+
+
+    <TextView
+        android:id="@+id/txt_sowing_vitebsk_region"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_500"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/txt_vitebsk_region"
+        android:textSize="@dimen/text_size_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_sowing_minsk_number_beet"  />
+
+    <TextView
+        android:id="@+id/txt_vitebsk_potatoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:background="#751565C0"
+        android:layout_weight="1"
+        android:text="@string/potatoes_area_in_hectares"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_minsk_beet"
+        app:layout_constraintStart_toStartOf="@id/txt_sowing_vitebsk_region"
+        app:layout_constraintTop_toBottomOf="@id/txt_sowing_vitebsk_region" />
+
+    <TextView
+        android:id="@+id/txt_vitebsk_beet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#751565C0"
+        android:gravity="center"
+        android:text="@string/beet_area_in_hectares"
+        app:layout_constraintEnd_toStartOf="@id/txt_vitebsk_cabbage"
+        app:layout_constraintStart_toEndOf="@id/txt_vitebsk_potatoes"
+        app:layout_constraintTop_toTopOf="@id/txt_vitebsk_potatoes" />
+
+    <TextView
+        android:id="@+id/txt_vitebsk_cabbage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#751565C0"
+        android:gravity="center"
+        android:text="@string/cabbage_area_in_hectares"
+        app:layout_constraintEnd_toEndOf="@id/txt_sowing_vitebsk_region"
+        app:layout_constraintStart_toEndOf="@id/txt_vitebsk_beet"
+        app:layout_constraintTop_toTopOf="@id/txt_vitebsk_potatoes" />
+
+    <TextView
+        android:id="@+id/txt_sowing_vitebsk_number_potato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_sowing_vitebsk_number_beet"
+        app:layout_constraintStart_toStartOf="@id/txt_sowing_vitebsk_region"
+        app:layout_constraintTop_toBottomOf="@id/txt_vitebsk_potatoes"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/txt_sowing_vitebsk_number_beet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/txt_sowing_vitebsk_number_cabbage"
+        app:layout_constraintStart_toEndOf="@id/txt_sowing_vitebsk_number_potato"
+        app:layout_constraintTop_toTopOf="@id/txt_sowing_vitebsk_number_potato"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/txt_sowing_vitebsk_number_cabbage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#271565C0"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/txt_sowing_vitebsk_region"
+        app:layout_constraintStart_toEndOf="@id/txt_sowing_vitebsk_number_beet"
+        app:layout_constraintTop_toTopOf="@id/txt_sowing_vitebsk_number_potato"
+        tools:text="300" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

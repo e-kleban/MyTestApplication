@@ -21,6 +21,7 @@
         <activity android:name=".FlagsAnimationActivity"/>
         <activity android:name=".CatAnimationActivity"/>
         <activity android:name=".FlagsActivity"/>
+        <activity android:name=".BelarusSowingActivity"/>
     </application>
 
 </manifest>
