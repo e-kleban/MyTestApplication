@@ -27,9 +27,25 @@ class BelarusSowingActivity : AppCompatActivity() {
         val vitebskNumberBeet = findViewById<TextView>(R.id.txt_sowing_vitebsk_number_beet)
         val vitebskNumberCabbage = findViewById<TextView>(R.id.txt_sowing_vitebsk_number_cabbage)
 
+        val grodnoNumberPotato = findViewById<TextView>(R.id.txt_sowing_grodno_number_potato)
+        val grodnoNumberBeet = findViewById<TextView>(R.id.txt_sowing_grodno_number_beet)
+        val grodnoNumberCabbage = findViewById<TextView>(R.id.txt_sowing_grodno_number_cabbage)
+
+        val gomelNumberPotato = findViewById<TextView>(R.id.txt_sowing_gomel_number_potato)
+        val gomelNumberBeet = findViewById<TextView>(R.id.txt_sowing_gomel_number_beet)
+        val gomelNumberCabbage = findViewById<TextView>(R.id.txt_sowing_gomel_number_cabbage)
+
+        val mogilevNumberPotato = findViewById<TextView>(R.id.txt_sowing_mogilev_number_potato)
+        val mogilevNumberBeet = findViewById<TextView>(R.id.txt_sowing_mogilev_number_beet)
+        val mogilevNumberCabbage = findViewById<TextView>(R.id.txt_sowing_mogilev_number_cabbage)
+
+
         val textBrest = findViewById<TextView>(R.id.txt_sowing_brest_region)
         val textMinsk = findViewById<TextView>(R.id.txt_sowing_minsk_region)
         val textVitebsk = findViewById<TextView>(R.id.txt_sowing_vitebsk_region)
+        val textGomel = findViewById<TextView>(R.id.txt_sowing_gomel_region)
+        val textMogilev = findViewById<TextView>(R.id.txt_sowing_mogilev_region)
+        val textGrodno = findViewById<TextView>(R.id.txt_sowing_grodno_region)
 
         viewModel = ViewModelProvider(this).get(BelarusSowingViewModel::class.java)
 
@@ -51,12 +67,33 @@ class BelarusSowingActivity : AppCompatActivity() {
             vitebskNumberCabbage.text = it.areaOfCabbage.toString()
         }
 
+        viewModel.gomelRegion.observe(this) {
+            gomelNumberPotato.text = it.areaOfPotato.toString()
+            gomelNumberBeet.text = it.areaOfBeet.toString()
+            gomelNumberCabbage.text = it.areaOfCabbage.toString()
+        }
+
+        viewModel.grodnoRegion.observe(this) {
+            grodnoNumberPotato.text = it.areaOfPotato.toString()
+            grodnoNumberBeet.text = it.areaOfBeet.toString()
+            grodnoNumberCabbage.text = it.areaOfCabbage.toString()
+        }
+
+        viewModel.mogilevRegion.observe(this) {
+            mogilevNumberPotato.text = it.areaOfPotato.toString()
+            mogilevNumberBeet.text = it.areaOfBeet.toString()
+            mogilevNumberCabbage.text = it.areaOfCabbage.toString()
+        }
+
         viewModel.winners.observe(this) {
             it.map { it.name }.forEach { name ->
                 val winnerTextView = when (name) {
                     "Brest" -> textBrest
                     "Minsk" -> textMinsk
                     "Vitebsk" -> textVitebsk
+                    "Gomel" -> textGomel
+                    "Grodno" -> textGrodno
+                    "Mogilev" -> textMogilev
                     else -> throw Exception("Region did't find")
                 }
                 winnerTextView.setBackgroundColor(Color.GREEN)
