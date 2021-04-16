@@ -16,6 +16,9 @@
     <string name="txt_brest_region">Brest region</string>
     <string name="txt_minsk_region">Minsk region</string>
     <string name="txt_vitebsk_region">Vitebsk region</string>
+    <string name="txt_grodno_region">Grodno region</string>
+    <string name="txt_gomel_region">Gomel region</string>
+    <string name="txt_mogilev_region">Mogilev region</string>
     <string name="potatoes_area_in_hectares">Potatoes, area in hectares</string>
     <string name="beet_area_in_hectares">Beet, area in hectares</string>
     <string name="cabbage_area_in_hectares">Cabbage, area in hectares</string>
