@@ -39,7 +39,6 @@ class BelarusSowingActivity : AppCompatActivity() {
         val mogilevNumberBeet = findViewById<TextView>(R.id.txt_sowing_mogilev_number_beet)
         val mogilevNumberCabbage = findViewById<TextView>(R.id.txt_sowing_mogilev_number_cabbage)
 
-
         val textBrest = findViewById<TextView>(R.id.txt_sowing_brest_region)
         val textMinsk = findViewById<TextView>(R.id.txt_sowing_minsk_region)
         val textVitebsk = findViewById<TextView>(R.id.txt_sowing_vitebsk_region)

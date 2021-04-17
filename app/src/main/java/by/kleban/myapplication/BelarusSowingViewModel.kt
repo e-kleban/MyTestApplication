@@ -7,7 +7,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.random.Random
 
-
 class BelarusSowingViewModel : ViewModel() {
 
     val brestRegion = MutableLiveData(Region("Brest", 0, 0, 0))
