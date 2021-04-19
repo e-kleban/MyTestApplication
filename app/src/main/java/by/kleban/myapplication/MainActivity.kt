@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonDz1 = findViewById<Button>(R.id.dz1)
         val buttonDz2 = findViewById<Button>(R.id.dz2)
+        val buttonDz3 = findViewById<Button>(R.id.dz3)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, ImageUploadActivity::class.java)
@@ -21,6 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         buttonDz2.setOnClickListener {
             val intent = Intent(this, FlagsAnimationActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonDz3.setOnClickListener {
+            val intent = Intent(this, BelarusSowingActivity::class.java)
             startActivity(intent)
         }
     }
