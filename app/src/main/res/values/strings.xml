@@ -22,4 +22,7 @@
     <string name="potatoes_area_in_hectares">Potatoes, area in hectares</string>
     <string name="beet_area_in_hectares">Beet, area in hectares</string>
     <string name="cabbage_area_in_hectares">Cabbage, area in hectares</string>
+    <string name="dz4">homework4</string>
+    <string name="button_add_snowdrop">Add snowdrop</string>
+    <string name="button_show_collection">show collection</string>
 </resources>

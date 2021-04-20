@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val buttonDz1 = findViewById<Button>(R.id.dz1)
         val buttonDz2 = findViewById<Button>(R.id.dz2)
         val buttonDz3 = findViewById<Button>(R.id.dz3)
+        val buttonDz4 = findViewById<Button>(R.id.dz4)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, ImageUploadActivity::class.java)
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         buttonDz3.setOnClickListener {
             val intent = Intent(this, BelarusSowingActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonDz4.setOnClickListener {
+        val intent = Intent(this,SnowdropStartActivity::class.java)
             startActivity(intent)
         }
     }
