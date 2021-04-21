@@ -24,8 +24,14 @@ class SnowdropStartFragment : Fragment(){
 
         val viewModel = ViewModelProvider(requireActivity()).get(SnowdropStartViewModel::class.java)
         val buttonAdd = view.findViewById<Button>(R.id.btn_add_snowdrop)
+        val buttonShow = view.findViewById<Button>(R.id.btn_show_collection)
+
         buttonAdd.setOnClickListener {
             viewModel.changeScreen(Screen.ADD)
+        }
+
+        buttonShow.setOnClickListener {
+            viewModel.changeScreen(Screen.SHOW)
         }
     }
 }
