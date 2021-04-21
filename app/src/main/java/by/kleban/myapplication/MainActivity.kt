@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import by.kleban.myapplication.homework1.ImageUploadActivity
+import by.kleban.myapplication.homework2.FlagsAnimationActivity
+import by.kleban.myapplication.homework3.BelarusSowingActivity
 
 class MainActivity : AppCompatActivity() {
 

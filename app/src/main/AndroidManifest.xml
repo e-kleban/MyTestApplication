@@ -17,11 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ImageUploadActivity"/>
-        <activity android:name=".FlagsAnimationActivity"/>
-        <activity android:name=".CatAnimationActivity"/>
-        <activity android:name=".FlagsActivity"/>
-        <activity android:name=".BelarusSowingActivity"/>
+        <activity android:name=".homework1.ImageUploadActivity"/>
+        <activity android:name=".homework2.FlagsAnimationActivity"/>
+        <activity android:name=".homework2.CatAnimationActivity"/>
+        <activity android:name=".homework2.FlagsActivity"/>
+        <activity android:name=".homework3.BelarusSowingActivity"/>
         <activity android:name=".SnowdropStartActivity"/>
     </application>
 
