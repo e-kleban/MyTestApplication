@@ -3,37 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="260dp">
+    android:layout_height="260dp"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/txt_kind"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        app:layout_constraintBottom_toTopOf="@id/txt_description"
         app:layout_constraintEnd_toStartOf="@id/img_ref"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
         tools:text="kind" />
 
     <ImageView
         android:id="@+id/img_ref"
-        android:layout_width="260dp"
-        android:layout_height="0dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/cat1" />
+        tools:src="@drawable/image_for_item" />
 
 
     <TextView
         android:id="@+id/txt_description"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_8dp"
         android:ellipsize="end"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/img_ref"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_kind"
+        app:layout_constraintTop_toBottomOf="@id/img_ref"
         tools:text="description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

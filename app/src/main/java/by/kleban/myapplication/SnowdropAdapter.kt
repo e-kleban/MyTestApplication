@@ -31,7 +31,7 @@ class SnowdropAdapter(context: Context) : RecyclerView.Adapter<SnowdropAdapter.V
         holder.tvKind.text = snowdrop.kind
         holder.tvDescription.text=snowdrop.description
         Picasso.get()
-            .load(snowdrop.ref)
+            .load(snowdrop.ref).error(R.drawable.error_load_image)
             .into(holder.imgRef)
     }
 
