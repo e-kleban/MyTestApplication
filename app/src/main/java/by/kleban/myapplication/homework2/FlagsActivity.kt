@@ -1,7 +1,8 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework2
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import by.kleban.myapplication.R
 
 
 class FlagsActivity: AppCompatActivity() {

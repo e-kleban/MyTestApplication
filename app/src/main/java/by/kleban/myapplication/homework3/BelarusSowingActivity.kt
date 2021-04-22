@@ -1,10 +1,11 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework3
 
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import by.kleban.myapplication.R
 
 
 class BelarusSowingActivity : AppCompatActivity() {
