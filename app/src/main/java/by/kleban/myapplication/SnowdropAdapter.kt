@@ -41,8 +41,8 @@ class SnowdropAdapter(context: Context) : RecyclerView.Adapter<SnowdropAdapter.V
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        val tvKind = itemView.findViewById<TextView>(R.id.txt_kind)
-        val imgRef = itemView.findViewById<ImageView>(R.id.img_ref)
-        val tvDescription = itemView.findViewById<TextView>(R.id.txt_description)
+        val tvKind: TextView = itemView.findViewById(R.id.txt_kind)
+        val imgRef :ImageView= itemView.findViewById(R.id.img_ref)
+        val tvDescription:TextView = itemView.findViewById(R.id.txt_description)
     }
 }
