@@ -1,63 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@drawable/bg_main">
 
-    <Button
-        android:id="@+id/dz1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_double"
-        android:layout_marginTop="@dimen/margin_double"
-        android:layout_marginEnd="@dimen/margin_double"
-        android:layout_marginBottom="@dimen/margin_8dp"
-        android:text="@string/dz1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/dz2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_double"
-        android:layout_marginEnd="@dimen/margin_double"
-        android:layout_marginBottom="@dimen/margin_8dp"
-        android:text="@string/dz2" />
+        <Button
+            android:id="@+id/dz1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginTop="@dimen/margin_double"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/dz1" />
 
-    <Button
-        android:id="@+id/dz3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_double"
-        android:layout_marginEnd="@dimen/margin_double"
-        android:layout_marginBottom="@dimen/margin_8dp"
-        android:text="@string/dz3" />
+        <Button
+            android:id="@+id/dz2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/dz2" />
 
-    <Button
-        android:id="@+id/dz4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_double"
-        android:layout_marginEnd="@dimen/margin_double"
-        android:layout_marginBottom="@dimen/margin_8dp"
-        android:text="@string/dz4" />
+        <Button
+            android:id="@+id/dz3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/dz3" />
 
-    <Button
-        android:id="@+id/dz5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_double"
-        android:layout_marginEnd="@dimen/margin_double"
-        android:layout_marginBottom="@dimen/margin_8dp"
-        android:text="@string/dz5" />
+        <Button
+            android:id="@+id/dz4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/dz4" />
 
-    <Button
-        android:id="@+id/dz6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_double"
-        android:layout_marginEnd="@dimen/margin_double"
-        android:layout_marginBottom="@dimen/margin_8dp"
-        android:text="@string/dz6" />
+        <Button
+            android:id="@+id/dz5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/dz5" />
+
+        <Button
+            android:id="@+id/dz6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:text="@string/dz6" />
 
 
-</LinearLayout>
+    </LinearLayout>
+</FrameLayout>
