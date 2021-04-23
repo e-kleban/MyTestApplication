@@ -1,4 +1,4 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework4
 
 
 enum class Screen {

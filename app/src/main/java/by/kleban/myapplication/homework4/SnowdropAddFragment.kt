@@ -1,4 +1,4 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework4
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import by.kleban.myapplication.R
 
 
 class SnowdropAddFragment:Fragment() {

@@ -1,9 +1,10 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework4
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import by.kleban.myapplication.R
 
 
 class SnowdropStartActivity : AppCompatActivity() {

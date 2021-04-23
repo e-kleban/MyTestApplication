@@ -22,7 +22,7 @@
         <activity android:name=".homework2.CatAnimationActivity"/>
         <activity android:name=".homework2.FlagsActivity"/>
         <activity android:name=".homework3.BelarusSowingActivity"/>
-        <activity android:name=".SnowdropStartActivity"/>
+        <activity android:name=".homework4.SnowdropStartActivity"/>
     </application>
 
 </manifest>
