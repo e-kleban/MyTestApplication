@@ -11,6 +11,7 @@ class UserRegistrationViewModel : ViewModel() {
     private val _passwordData = MutableLiveData<String>()
     private val _validationNameData = MutableLiveData<Validation>()
     private val _validationPasswordData = MutableLiveData<Validation>()
+    private val _registrationData = MutableLiveData<Registration>()
 
 
     val userNameData: LiveData<String>
@@ -33,6 +34,9 @@ class UserRegistrationViewModel : ViewModel() {
     val validationPasswordData: LiveData<Validation>
         get() = _validationPasswordData
 
+    val registrationData: LiveData<Registration>
+        get() = _registrationData
+
     private fun validateName(): Validation {
         return when {
             _userNameData.value.isNullOrEmpty() -> Validation.EMPTY
@@ -43,6 +47,7 @@ class UserRegistrationViewModel : ViewModel() {
     private fun validatePassword(): Validation {
         return when {
             _passwordData.value.isNullOrEmpty() -> Validation.EMPTY
+            _passwordData.value?.length ?: 0 > 8 -> Validation.TOO_MANY_SYMBOLS
             else -> Validation.VALID
         }
     }
@@ -50,6 +55,17 @@ class UserRegistrationViewModel : ViewModel() {
     fun registration() {
         _validationNameData.value = validateName()
         _validationPasswordData.value = validatePassword()
+        registerUser()
+    }
 
+    private fun registerUser() {
+        val validationName = _validationNameData.value
+        val validationPassword = _validationPasswordData.value
+        _registrationData.value =
+            if (validationName == Validation.VALID && validationPassword == Validation.VALID) {
+                Registration.POSSIBLE
+            } else {
+                Registration.IMPOSSIBLE
+            }
     }
 }

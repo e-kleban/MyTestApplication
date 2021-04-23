@@ -3,5 +3,6 @@ package by.kleban.myapplication
 
 enum class Validation {
     VALID,
-    EMPTY
+    EMPTY,
+    TOO_MANY_SYMBOLS
 }

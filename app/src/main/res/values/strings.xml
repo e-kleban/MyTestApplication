@@ -35,6 +35,10 @@
     <string name="button_create_an_account">Create account</string>
     <string name="hint_password">password</string>
     <string name="hint_name">name</string>
-    <string name="error_empty_name">Field can not be empty!</string>
-    <string name="error_empty_password">Field can not be empty!</string>
+    <string name="error_empty_field">Field can not be empty!</string>
+    <string name="error_many_symbols">Too many symbols!!</string>
+    <string name="dialog_title_great">Great!</string>
+    <string name="dialog_message">Registration completed successfully</string>
+    <string name="btn_ok">ok</string>
+    <string name="btn_enter">enter</string>
 </resources>
