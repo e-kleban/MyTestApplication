@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="by.kleban.myapplication"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.INTERNET"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="by.kleban.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".UserRegistrationActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,12 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".homework1.ImageUploadActivity"/>
-        <activity android:name=".homework2.FlagsAnimationActivity"/>
-        <activity android:name=".homework2.CatAnimationActivity"/>
-        <activity android:name=".homework2.FlagsActivity"/>
-        <activity android:name=".homework3.BelarusSowingActivity"/>
-        <activity android:name=".homework4.SnowdropStartActivity"/>
+        <activity android:name=".homework1.ImageUploadActivity" />
+        <activity android:name=".homework2.FlagsAnimationActivity" />
+        <activity android:name=".homework2.CatAnimationActivity" />
+        <activity android:name=".homework2.FlagsActivity" />
+        <activity android:name=".homework3.BelarusSowingActivity" />
+        <activity android:name=".homework4.SnowdropStartActivity" />
     </application>
 
 </manifest>
