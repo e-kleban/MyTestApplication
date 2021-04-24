@@ -11,7 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".UserRegistrationActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +24,8 @@
         <activity android:name=".homework2.FlagsActivity" />
         <activity android:name=".homework3.BelarusSowingActivity" />
         <activity android:name=".homework4.SnowdropStartActivity" />
+        <activity android:name=".UserRegistrationActivity" />
+        <activity android:name=".WelcomeActivity"/>
     </application>
 
 </manifest>

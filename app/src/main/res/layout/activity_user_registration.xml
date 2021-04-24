@@ -9,12 +9,12 @@
     tools:context=".UserRegistrationActivity">
 
     <TextView
-        android:id="@+id/txt_welcome"
+        android:id="@+id/txt_welcome_registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="@string/txt_welcome"
+        android:text="@string/txt_welcome_registration"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_welcome"
+        app:layout_constraintTop_toBottomOf="@id/txt_welcome_registration"
         app:startIconDrawable="@drawable/icon_login">
 
         <com.google.android.material.textfield.TextInputEditText

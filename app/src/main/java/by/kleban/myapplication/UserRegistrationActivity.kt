@@ -37,32 +37,11 @@ class UserRegistrationActivity : AppCompatActivity() {
         }
 
         viewModel.validationNameData.observe(this) { validation ->
-            when (validation) {
-                Validation.EMPTY -> {
-                    textInputLayoutName.isErrorEnabled = true
-                    textInputLayoutName.error = getString(R.string.error_empty_field)
-                }
-                Validation.VALID -> {
-                    textInputLayoutName.isErrorEnabled = false
-                }
-            }
+            checkValidationName(validation, textInputLayoutName)
         }
 
         viewModel.validationPasswordData.observe(this) { validation ->
-            when (validation) {
-                Validation.EMPTY -> {
-                    textInputLayoutPassword.isErrorEnabled = true
-                    textInputLayoutPassword.error = getString(R.string.error_empty_field)
-                }
-                Validation.VALID -> {
-                    textInputLayoutPassword.isErrorEnabled = false
-                }
-                Validation.TOO_MANY_SYMBOLS->{
-                    textInputLayoutPassword.isErrorEnabled=true
-                    textInputLayoutPassword.error= getString(R.string.error_many_symbols)
-                }
-
-            }
+            checkValidationPassword(validation, textInputLayoutPassword)
         }
 
         buttonCreateUser.setOnClickListener {
@@ -71,31 +50,53 @@ class UserRegistrationActivity : AppCompatActivity() {
 
         viewModel.registrationData.observe(this) { registration ->
             if (registration == Registration.POSSIBLE) {
-                MaterialAlertDialogBuilder(this)
-                    .setTitle(R.string.dialog_title_great)
-                    .setMessage(R.string.dialog_message)
-                    .setCancelable(true)
-                    .setNegativeButton(R.string.btn_ok) { dialog, id ->
-                        dialog.dismiss()
-                    }
-                    .setPositiveButton(R.string.btn_enter) { dialog, id ->
-                        val intent = Intent(this, WelcomeActivity::class.java)
-                        startActivity(intent)
-                    }.show()
-
+                createAlertDialog()
             }
         }
-
-
     }
 
+    private fun checkValidationName(validation: Validation, textInputLayoutName: TextInputLayout) {
+        when (validation) {
+            Validation.EMPTY -> {
+                textInputLayoutName.isErrorEnabled = true
+                textInputLayoutName.error = getString(R.string.error_empty_field)
+            }
+            else -> {
+                textInputLayoutName.isErrorEnabled = false
+            }
+        }
+    }
 
+    private fun checkValidationPassword(
+        validation: Validation,
+        textInputLayoutPassword: TextInputLayout
+    ) {
+        when (validation) {
+            Validation.EMPTY -> {
+                textInputLayoutPassword.isErrorEnabled = true
+                textInputLayoutPassword.error = getString(R.string.error_empty_field)
+            }
+            Validation.VALID -> {
+                textInputLayoutPassword.isErrorEnabled = false
+            }
+            Validation.TOO_MANY_SYMBOLS -> {
+                textInputLayoutPassword.isErrorEnabled = true
+                textInputLayoutPassword.error = getString(R.string.error_many_symbols)
+            }
+        }
+    }
+
+    private fun createAlertDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.dialog_title_great)
+            .setMessage(R.string.dialog_message)
+            .setCancelable(true)
+            .setNegativeButton(R.string.btn_ok) { dialog, id ->
+                dialog.dismiss()
+            }
+            .setPositiveButton(R.string.btn_enter) { dialog, id ->
+                val intent = Intent(this, WelcomeActivity::class.java)
+                startActivity(intent)
+            }.show()
+    }
 }
-
-
-//if (it?.toString().isNullOrEmpty()) {
-//    textInputLayoutName.isErrorEnabled = true
-//    textInputLayoutName.error = getString(R.string.error_empty_name)
-//} else {
-//    textInputLayoutName.error = null
-//}

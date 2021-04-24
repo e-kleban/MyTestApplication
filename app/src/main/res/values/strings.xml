@@ -31,7 +31,7 @@
     <string name="edt_input_url_of_snowdrop_image">input URL of snowdrop image</string>
     <string name="edt_input_description">input description</string>
     <string name="btn_add_snowdrop">Add snowdrop</string>
-    <string name="txt_welcome">Welcome, please enter your registration data.</string>
+    <string name="txt_welcome_registration">Welcome, please enter your registration data.</string>
     <string name="button_create_an_account">Create account</string>
     <string name="hint_password">password</string>
     <string name="hint_name">name</string>
@@ -41,4 +41,5 @@
     <string name="dialog_message">Registration completed successfully</string>
     <string name="btn_ok">ok</string>
     <string name="btn_enter">enter</string>
+    <string name="txt_welcome">welcome</string>
 </resources>
