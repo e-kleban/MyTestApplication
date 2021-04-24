@@ -1,6 +1,5 @@
 package by.kleban.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +10,7 @@ import com.google.android.material.textfield.TextInputLayout
 
 class UserRegistrationActivity : AppCompatActivity() {
 
-    val viewModel by lazy {
+    private val viewModel by lazy {
         ViewModelProvider(this).get(UserRegistrationViewModel::class.java)
     }
 
@@ -19,7 +18,6 @@ class UserRegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_registration)
-
 
         val textInputLayoutName = findViewById<TextInputLayout>(R.id.txt_input_layout_user_name)
         val textInputLayoutPassword = findViewById<TextInputLayout>(R.id.txt_input_layout_password)
@@ -50,7 +48,10 @@ class UserRegistrationActivity : AppCompatActivity() {
 
         viewModel.registrationData.observe(this) { registration ->
             if (registration == Registration.POSSIBLE) {
-                createAlertDialog()
+                val registeredName = viewModel.userNameData.value
+                if (registeredName != null) {
+                    createAlertDialog(registeredName)
+                }
             }
         }
     }
@@ -86,7 +87,7 @@ class UserRegistrationActivity : AppCompatActivity() {
         }
     }
 
-    private fun createAlertDialog() {
+    private fun createAlertDialog(registeredName: String) {
         MaterialAlertDialogBuilder(this)
             .setTitle(R.string.dialog_title_great)
             .setMessage(R.string.dialog_message)
@@ -95,7 +96,7 @@ class UserRegistrationActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             .setPositiveButton(R.string.btn_enter) { dialog, id ->
-                val intent = Intent(this, WelcomeActivity::class.java)
+                val intent = WelcomeActivity.newIntent(this, registeredName)
                 startActivity(intent)
             }.show()
     }
