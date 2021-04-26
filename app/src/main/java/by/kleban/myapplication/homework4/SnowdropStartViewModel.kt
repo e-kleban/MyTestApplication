@@ -1,4 +1,4 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework4
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
