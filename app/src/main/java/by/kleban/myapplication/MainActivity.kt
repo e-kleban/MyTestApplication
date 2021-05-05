@@ -39,12 +39,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonDz4.setOnClickListener {
-        val intent = Intent(this, SnowdropStartActivity::class.java)
+            val intent = Intent(this, SnowdropStartActivity::class.java)
             startActivity(intent)
         }
 
         buttonDz5.setOnClickListener {
             val intent = Intent(this, UserRegistrationActivity::class.java)
+            startActivity(intent)
+        }
+        buttonDz6.setOnClickListener {
+            val intent = Intent(this, CongratulationActivity::class.java)
             startActivity(intent)
         }
     }
