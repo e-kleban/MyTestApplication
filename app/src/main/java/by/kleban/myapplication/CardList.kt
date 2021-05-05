@@ -1,13 +1,11 @@
 package by.kleban.myapplication
 
-import by.kleban.myapplication.Card
-
 
 class CardList {
 
     companion object {
-        fun createList(): List<Card> {
-            return listOf(
+        fun createList(): MutableList<Card> {
+            return mutableListOf(
                 Card(
                     "Праздник радостный и светлый\n" +
                             "Отмечает вся страна.\n" +

@@ -9,5 +9,23 @@
         android:id="@+id/welcomeFragment"
         android:name="by.kleban.myapplication.WelcomeFragment"
         android:label="WelcomeFragment"
-        tools:layout ="@layout/fragment_welcome" />
+        tools:layout ="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/showCardsShowFragment"
+            app:destination="@id/cardsShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardsShowFragment"
+        android:name="by.kleban.myapplication.CardsShowFragment"
+        android:label="CardsShowFragment"
+        tools:layout ="@layout/fragment_cards_show">
+        <action
+            android:id="@+id/showOneCardFragment"
+            app:destination="@id/oneCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneCardFragment"
+        android:name="by.kleban.myapplication.OneCardFragment"
+        android:label="OneCardFragment"
+        tools:layout ="@layout/fragment_one_card"/>
 </navigation>
