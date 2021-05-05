@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         buttonDz6.setOnClickListener {
-            val intent = Intent(this, CongratulationActivity::class.java)
+            val intent = Intent(this, CongratulationContainerActivity::class.java)
             startActivity(intent)
         }
     }
