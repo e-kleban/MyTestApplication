@@ -38,8 +38,7 @@ class CardsShowFragment : Fragment(), CardShowAdapter.OnItemClickListener {
         }
     }
 
-    override fun onItemClick(position: Int) {
-        val card = viewModel.listCardsLiveData.value?.get(position)
+    override fun onItemClick(card: Card) {
         val bundle = Bundle().apply {
             putSerializable(OneCardFragment.PUT, card)
         }

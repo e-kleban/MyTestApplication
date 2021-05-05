@@ -8,14 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-
 class CardShowAdapter(
     private val cardsList: MutableList<Card>,
     val listener: OnItemClickListener
 ) :
     RecyclerView.Adapter<CardShowAdapter.CardShowViewHolder>() {
-
-    private lateinit var cardUse: Card
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardShowViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_card, parent, false)
@@ -23,10 +20,9 @@ class CardShowAdapter(
     }
 
     override fun onBindViewHolder(holder: CardShowViewHolder, position: Int) {
-        cardUse = cardsList[position]
-        holder.textCard.text = cardUse.congratulation
+        holder.textCard.text = cardsList[position].congratulation
         Picasso.get()
-            .load(cardUse.ref)
+            .load(cardsList[position].ref)
             .error(R.drawable.error_load_image)
             .into(holder.imageCard)
     }
@@ -36,7 +32,7 @@ class CardShowAdapter(
     }
 
     interface OnItemClickListener {
-        fun onItemClick(position: Int)
+        fun onItemClick(card: Card)
     }
 
     inner class CardShowViewHolder(view: View) : RecyclerView.ViewHolder(view),
@@ -52,7 +48,7 @@ class CardShowAdapter(
         override fun onClick(view: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(position)
+                listener.onItemClick(cardsList[position])
             }
         }
     }

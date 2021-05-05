@@ -25,13 +25,13 @@ class OneCardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        card = arguments?.getSerializable(PUT) as Card
         return inflater.inflate(R.layout.fragment_one_card, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        card = arguments?.getSerializable(PUT) as Card
         oneText = view.findViewById(R.id.one_text)
         oneImage = view.findViewById(R.id.one_image)
         oneText.text = card.congratulation
