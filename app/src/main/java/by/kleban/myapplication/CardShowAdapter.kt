@@ -5,12 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.FragmentNavigator
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 class CardShowAdapter(
     private val cardsList: MutableList<Card>,
-    val listener: OnItemClickListener
+    val listener: OnItemClickListener,
 ) :
     RecyclerView.Adapter<CardShowAdapter.CardShowViewHolder>() {
 
@@ -20,11 +22,15 @@ class CardShowAdapter(
     }
 
     override fun onBindViewHolder(holder: CardShowViewHolder, position: Int) {
-        holder.textCard.text = cardsList[position].congratulation
+        val card = cardsList[position]
+        holder.textCard.text = card.congratulation
         Picasso.get()
-            .load(cardsList[position].ref)
+            .load(card.ref)
             .error(R.drawable.error_load_image)
             .into(holder.imageCard)
+
+        holder.imageCard.transitionName = "image${card.ref}"
+        holder.textCard.transitionName = "text${card.ref}"
     }
 
     override fun getItemCount(): Int {
@@ -32,10 +38,10 @@ class CardShowAdapter(
     }
 
     interface OnItemClickListener {
-        fun onItemClick(card: Card)
+        fun onItemClick(card: Card, extras: FragmentNavigator.Extras)
     }
 
-    inner class CardShowViewHolder(view: View) : RecyclerView.ViewHolder(view),
+    inner class CardShowViewHolder(view: View) : RecyclerView.ViewHolder(view.rootView),
         View.OnClickListener {
 
         val imageCard: ImageView = view.findViewById(R.id.item_img_card)
@@ -48,7 +54,11 @@ class CardShowAdapter(
         override fun onClick(view: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(cardsList[position])
+                val extras = FragmentNavigatorExtras(
+                    Pair(imageCard, imageCard.transitionName),
+                    Pair(textCard, textCard.transitionName)
+                )
+                listener.onItemClick(cardsList[position], extras)
             }
         }
     }

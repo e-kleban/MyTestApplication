@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,10 +39,10 @@ class CardsShowFragment : Fragment(), CardShowAdapter.OnItemClickListener {
         }
     }
 
-    override fun onItemClick(card: Card) {
+    override fun onItemClick(card: Card, extras: FragmentNavigator.Extras) {
         val bundle = Bundle().apply {
             putSerializable(OneCardFragment.PUT, card)
         }
-        findNavController().navigate(R.id.showOneCardFragment, bundle)
+        findNavController().navigate(R.id.showOneCardFragment, bundle, null, extras)
     }
 }

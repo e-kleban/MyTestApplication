@@ -25,11 +25,7 @@
         tools:layout ="@layout/fragment_cards_show">
         <action
             android:id="@+id/showOneCardFragment"
-            app:destination="@id/oneCardFragment"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right" />
+            app:destination="@id/oneCardFragment" />
     </fragment>
     <fragment
         android:id="@+id/oneCardFragment"
