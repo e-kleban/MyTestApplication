@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/one_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_double"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/one_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/images_card" />
+
+    <TextView
+        android:id="@+id/one_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_double"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one_image"
+        tools:text="Поздравляем с Днем Победы —\nС легендарным, светлым днем.\nМы желаем мира в доме,\nВ обществе, в стране родной.\n\nМы желаем, чтоб на свете\nВпредь нигде и никогда\nНе случилась, не разверзлась\nБольше ни одна война.\n\nМы желаем, чтобы люди\nОхраняли, берегли\nМир, который наши деды\nСвоим внукам принесли." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

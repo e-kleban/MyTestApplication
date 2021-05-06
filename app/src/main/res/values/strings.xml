@@ -42,4 +42,8 @@
     <string name="btn_ok">ok</string>
     <string name="btn_enter">enter</string>
     <string name="txt_welcome">welcome</string>
+    <string name="welcome_to_our_application_quot_victory_day_cards_quot">Welcome to our application</string>
+    <string name="old_design_by_documentation_of_1990s">old design by documentation of 1990s</string>
+    <string name="show_list_of_cards">show list of cards</string>
+    <string name="quot_victory_day_cards_quot">"Victory day cards"</string>
 </resources>

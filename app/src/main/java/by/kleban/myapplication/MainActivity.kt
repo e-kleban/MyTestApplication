@@ -8,6 +8,7 @@ import by.kleban.myapplication.homework1.ImageUploadActivity
 import by.kleban.myapplication.homework2.FlagsAnimationActivity
 import by.kleban.myapplication.homework3.BelarusSowingActivity
 import by.kleban.myapplication.homework4.SnowdropStartActivity
+import by.kleban.myapplication.homework5.UserRegistrationActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,12 +39,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonDz4.setOnClickListener {
-        val intent = Intent(this, SnowdropStartActivity::class.java)
+            val intent = Intent(this, SnowdropStartActivity::class.java)
             startActivity(intent)
         }
 
         buttonDz5.setOnClickListener {
-            val intent = Intent(this,UserRegistrationActivity::class.java)
+            val intent = Intent(this, UserRegistrationActivity::class.java)
+            startActivity(intent)
+        }
+        buttonDz6.setOnClickListener {
+            val intent = Intent(this, CongratulationContainerActivity::class.java)
             startActivity(intent)
         }
     }

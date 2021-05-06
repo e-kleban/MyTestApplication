@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:padding="16dp"
-    tools:context=".UserRegistrationActivity">
+    tools:context=".homework5.UserRegistrationActivity">
 
     <TextView
         android:id="@+id/txt_welcome_registration"

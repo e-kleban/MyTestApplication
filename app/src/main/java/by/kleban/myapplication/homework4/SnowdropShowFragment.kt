@@ -27,7 +27,7 @@ class SnowdropShowFragment : Fragment() {
         showRecyclerView.adapter = adapter
 
         val viewModel = ViewModelProvider(requireActivity()).get(SnowdropStartViewModel::class.java)
-        viewModel.snowdropLiveData.observe(this) { items ->
+        viewModel.snowdropLiveData.observe(viewLifecycleOwner) { items ->
             if (!items.isNullOrEmpty()) {
                 adapter.setItems(items)
             }
