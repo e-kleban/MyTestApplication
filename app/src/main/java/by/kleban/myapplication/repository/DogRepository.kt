@@ -1,7 +1,7 @@
-package by.kleban.myapplication.homework7.repository
+package by.kleban.myapplication.repository
 
-import by.kleban.myapplication.homework7.database.MyDatabase
-import by.kleban.myapplication.homework7.database.entity.Dog
+import by.kleban.myapplication.database.MyDatabase
+import by.kleban.myapplication.database.entity.Dog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

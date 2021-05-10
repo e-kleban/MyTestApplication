@@ -1,10 +1,10 @@
-package by.kleban.myapplication.homework7.database.dao
+package by.kleban.myapplication.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import by.kleban.myapplication.homework7.database.entity.Dog
+import by.kleban.myapplication.database.entity.Dog
 
 @Dao
 interface DogDao {

@@ -49,8 +49,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, UserRegistrationActivity::class.java)
             startActivity(intent)
         }
+
         buttonDz6.setOnClickListener {
             val intent = Intent(this, CongratulationContainerActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonDz7.setOnClickListener {
+            val intent = Intent(this, DogContainerActivity::class.java)
             startActivity(intent)
         }
     }
