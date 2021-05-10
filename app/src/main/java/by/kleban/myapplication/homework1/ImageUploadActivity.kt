@@ -27,6 +27,7 @@ class ImageUploadActivity : AppCompatActivity() {
             } else {
                 Picasso.get()
                     .load(inputField.text.toString())
+                    .error(R.drawable.error_load_image)
                     .into(imageView)
                 inputField.text.clear()
             }

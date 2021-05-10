@@ -1,7 +1,8 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework6
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import by.kleban.myapplication.R
 
 class CongratulationContainerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
