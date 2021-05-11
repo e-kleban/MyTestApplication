@@ -27,6 +27,7 @@ class WelcomeDogCatalogFragment : Fragment() {
             requireActivity().supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.fragment_container__hw7_dog, ShowDogsFragment())
+                .addToBackStack(null)
                 .commit()
         }
     }

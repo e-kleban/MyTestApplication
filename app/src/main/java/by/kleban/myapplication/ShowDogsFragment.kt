@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import by.kleban.myapplication.database.entity.Dog
 
 
-class ShowDogsFragment : Fragment() {
+class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
 
     private lateinit var listOfDog: List<Dog>
 
@@ -41,7 +41,7 @@ class ShowDogsFragment : Fragment() {
 
         val recycler = view.findViewById<RecyclerView>(R.id.recycler_dog)
         recycler.layoutManager = LinearLayoutManager(requireContext())
-        val myAdapter = DogsShowAdapter()
+        val myAdapter = DogsShowAdapter(this)
         recycler.adapter = myAdapter
 
         viewModel.dogListLiveData.observe(viewLifecycleOwner) {
@@ -77,5 +77,16 @@ class ShowDogsFragment : Fragment() {
                 else -> false
             }
         }
+    }
+
+    override fun onItemClick(dog: Dog) {
+        val bundle = Bundle().apply {
+            putSerializable(OneDogFragment.PUT, dog)
+        }
+        requireActivity().supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container__hw7_dog, OneDogFragment::class.java, bundle)
+            .addToBackStack(null)
+            .commit()
     }
 }
