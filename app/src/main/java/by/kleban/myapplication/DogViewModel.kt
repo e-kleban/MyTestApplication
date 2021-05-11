@@ -9,7 +9,7 @@ import by.kleban.myapplication.database.entity.Dog
 import by.kleban.myapplication.repository.DogRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 
 class DogViewModel(application: Application) : AndroidViewModel(application) {
@@ -21,13 +21,46 @@ class DogViewModel(application: Application) : AndroidViewModel(application) {
     val dogListLiveData: LiveData<List<Dog>>
         get() = _dogListLiveData
 
+    private val _dogListWithFilter = MutableLiveData<List<Dog>>()
+    val dogListWithFilter: LiveData<List<Dog>>
+        get() = _dogListWithFilter
+
     fun loadAll() {
-        ioScope.async {
+        ioScope.launch {
             val dogList = dogRepository.getAll()
             _dogListLiveData.postValue(dogList)
         }
-
     }
 
+    fun addDog(dog: Dog) {
+        ioScope.launch {
+            dogRepository.insertDog(dog)
+            _dogListLiveData.postValue(dogRepository.getAll())
+        }
+    }
 
+    fun clear() {
+        dogRepository.clear()
+    }
+
+    fun select(string: String) {
+        _dogListWithFilter.value = _dogListLiveData.value?.filter {
+            it.breed.startsWith(string, true)
+        }
+    }
+
+    fun delete(breed: String) {
+        _dogListLiveData.value?.filter {
+            it.breed.startsWith(breed)
+        }.apply {
+            if (this != null) {
+                for (dog in this) {
+                    dogRepository.delete(dog)
+                }
+            }
+        }
+
+    }
 }
+
+

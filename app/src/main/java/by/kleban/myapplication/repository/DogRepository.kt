@@ -21,15 +21,27 @@ class DogRepository(
         }.await()
     }
 
-    suspend fun insertDog(dog: Dog) {
+    fun insertDog(dog: Dog) {
         ioScope.launch {
             dogDao.insertDog(dog)
         }
     }
 
-    suspend fun update(dog: Dog) {
+    fun update(dog: Dog) {
         ioScope.launch {
             dogDao.update(dog)
+        }
+    }
+
+    fun clear() {
+        ioScope.launch {
+            dogDao.clear()
+        }
+    }
+
+    fun delete(dog:Dog){
+        ioScope.launch {
+            dogDao.delete(dog)
         }
     }
 

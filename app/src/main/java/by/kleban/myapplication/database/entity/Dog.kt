@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class Dog(
     val breed: String,
     val ref: String,
-    val congratulation: String
+    val description: String
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null

@@ -1,9 +1,6 @@
 package by.kleban.myapplication.database.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import by.kleban.myapplication.database.entity.Dog
 
 @Dao
@@ -17,5 +14,12 @@ interface DogDao {
 
     @Update
     suspend fun update(dog: Dog)
+
+    @Query("DELETE FROM table_dog")
+    suspend fun clear()
+
+    @Delete
+    suspend fun delete(dog: Dog)
+
 
 }
