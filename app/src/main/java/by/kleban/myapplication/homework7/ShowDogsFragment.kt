@@ -1,4 +1,4 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework7
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,10 +13,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import by.kleban.myapplication.database.entity.Dog
+import by.kleban.myapplication.R
+import by.kleban.myapplication.homework7.database.entity.Dog
 
 
 class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
+
+    private lateinit var edtSearch: EditText
 
     private val viewModel by lazy {
         ViewModelProvider(requireActivity()).get(DogViewModel::class.java)
@@ -36,14 +39,14 @@ class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
         viewModel.loadAll()
 
         val toolbar = view.findViewById<Toolbar>(R.id.tool_bar)
-        val edtSearch = view.findViewById<EditText>(R.id.search_input_text)
+        edtSearch = view.findViewById(R.id.search_input_text)
 
         val recycler = view.findViewById<RecyclerView>(R.id.recycler_dog)
         recycler.layoutManager = LinearLayoutManager(requireContext())
         val myAdapter = DogsShowAdapter(this)
         recycler.adapter = myAdapter
 
-        viewModel.dogListLiveData.observe(viewLifecycleOwner) {
+        viewModel.dogListLiveData.observe(requireActivity()) {
             myAdapter.setItems(it)
         }
 
@@ -62,14 +65,25 @@ class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
                         edtSearch.visibility = View.VISIBLE
                         edtSearch.doAfterTextChanged { Editable ->
                             viewModel.select(Editable.toString())
-                            viewModel.dogListWithFilter.observe(viewLifecycleOwner) { list ->
-                                myAdapter.setItems(list)
+                            viewModel.dogListWithFilter.observe(requireActivity()) { listOfFilterDog ->
+                                myAdapter.setItems(listOfFilterDog)
                             }
                         }
                     } else if (edtSearch.visibility == View.VISIBLE) {
                         menuItem.setIcon(R.drawable.ic_baseline_search_24)
                         edtSearch.visibility = View.GONE
+                        edtSearch.text.clear()
+                        viewModel.dogListLiveData.observe(requireActivity()) { listOfDog ->
+                            myAdapter.setItems(listOfDog)
+                        }
                     }
+                    true
+                }
+                R.id.deleteDog -> {
+                    DeleteDogDialogFragment().show(
+                        requireActivity().supportFragmentManager,
+                        DeleteDogDialogFragment.DELETE
+                    )
                     true
                 }
                 else -> false
@@ -82,6 +96,7 @@ class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
         image: Pair<ImageView, String>,
         description: Pair<TextView, String>
     ) {
+        edtSearch.text.clear()
         val bundle = Bundle().apply {
             putSerializable(OneDogFragment.PUT, dog)
         }

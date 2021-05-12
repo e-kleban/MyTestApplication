@@ -1,4 +1,4 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework7
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import by.kleban.myapplication.database.entity.Dog
+import by.kleban.myapplication.R
+import by.kleban.myapplication.homework7.database.entity.Dog
 import com.squareup.picasso.Picasso
 
 

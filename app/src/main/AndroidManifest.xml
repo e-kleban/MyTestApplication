@@ -27,7 +27,7 @@
         <activity android:name=".homework4.SnowdropStartActivity" />
         <activity android:name=".homework5.UserRegistrationActivity" />
         <activity android:name=".homework5.WelcomeActivity" />
-        <activity android:name=".DogContainerActivity"/>
+        <activity android:name=".homework7.DogContainerActivity"/>
     </application>
 
 </manifest>

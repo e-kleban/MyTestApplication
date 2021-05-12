@@ -1,11 +1,11 @@
-package by.kleban.myapplication.database
+package by.kleban.myapplication.homework7.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import by.kleban.myapplication.database.dao.DogDao
-import by.kleban.myapplication.database.entity.Dog
+import by.kleban.myapplication.homework7.database.dao.DogDao
+import by.kleban.myapplication.homework7.database.entity.Dog
 
 @Database(entities = [Dog::class], version = 1)
 abstract class MyDatabase : RoomDatabase() {

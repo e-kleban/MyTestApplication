@@ -1,12 +1,12 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework7
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import by.kleban.myapplication.database.MyDatabase
-import by.kleban.myapplication.database.entity.Dog
-import by.kleban.myapplication.repository.DogRepository
+import by.kleban.myapplication.homework7.database.MyDatabase
+import by.kleban.myapplication.homework7.database.entity.Dog
+import by.kleban.myapplication.homework7.repository.DogRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -50,17 +50,9 @@ class DogViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun delete(breed: String) {
-        _dogListLiveData.value?.filter {
-            it.breed.startsWith(breed)
-        }.apply {
-            if (this != null) {
-                for (dog in this) {
-                    dogRepository.delete(dog)
-                }
-            }
+        ioScope.launch {
+            dogRepository.delete(breed)
+            _dogListLiveData.postValue(dogRepository.getAll())
         }
-
     }
 }
-
-

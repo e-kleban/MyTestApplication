@@ -1,4 +1,4 @@
-package by.kleban.myapplication.database.entity
+package by.kleban.myapplication.homework7.database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

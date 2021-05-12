@@ -1,7 +1,7 @@
-package by.kleban.myapplication.repository
+package by.kleban.myapplication.homework7.repository
 
-import by.kleban.myapplication.database.MyDatabase
-import by.kleban.myapplication.database.entity.Dog
+import by.kleban.myapplication.homework7.database.MyDatabase
+import by.kleban.myapplication.homework7.database.entity.Dog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -21,7 +21,7 @@ class DogRepository(
         }.await()
     }
 
-    fun insertDog(dog: Dog) {
+    suspend fun insertDog(dog: Dog) {
         ioScope.launch {
             dogDao.insertDog(dog)
         }
@@ -39,9 +39,9 @@ class DogRepository(
         }
     }
 
-    fun delete(dog:Dog){
+    fun delete(breed: String){
         ioScope.launch {
-            dogDao.delete(dog)
+            dogDao.delete(breed)
         }
     }
 

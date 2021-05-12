@@ -1,4 +1,4 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework7
 
 import android.app.Dialog
 import android.content.DialogInterface
@@ -6,7 +6,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
-import by.kleban.myapplication.database.entity.Dog
+import by.kleban.myapplication.R
+import by.kleban.myapplication.homework7.database.entity.Dog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
 

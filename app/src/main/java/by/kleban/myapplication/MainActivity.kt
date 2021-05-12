@@ -10,6 +10,7 @@ import by.kleban.myapplication.homework3.BelarusSowingActivity
 import by.kleban.myapplication.homework4.SnowdropStartActivity
 import by.kleban.myapplication.homework5.UserRegistrationActivity
 import by.kleban.myapplication.homework6.CongratulationContainerActivity
+import by.kleban.myapplication.homework7.DogContainerActivity
 
 class MainActivity : AppCompatActivity() {
 
