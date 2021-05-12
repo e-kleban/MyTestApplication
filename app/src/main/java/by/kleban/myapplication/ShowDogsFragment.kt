@@ -1,11 +1,12 @@
 package by.kleban.myapplication
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
@@ -16,8 +17,6 @@ import by.kleban.myapplication.database.entity.Dog
 
 
 class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
-
-    private lateinit var listOfDog: List<Dog>
 
     private val viewModel by lazy {
         ViewModelProvider(requireActivity()).get(DogViewModel::class.java)
@@ -45,7 +44,6 @@ class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
         recycler.adapter = myAdapter
 
         viewModel.dogListLiveData.observe(viewLifecycleOwner) {
-            Log.d("123", "${it.toString()}")
             myAdapter.setItems(it)
         }
 
@@ -79,13 +77,20 @@ class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
         }
     }
 
-    override fun onItemClick(dog: Dog) {
+    override fun onItemClick(
+        dog: Dog, text: Pair<TextView, String>,
+        image: Pair<ImageView, String>,
+        description: Pair<TextView, String>
+    ) {
         val bundle = Bundle().apply {
             putSerializable(OneDogFragment.PUT, dog)
         }
         requireActivity().supportFragmentManager
             .beginTransaction()
             .replace(R.id.fragment_container__hw7_dog, OneDogFragment::class.java, bundle)
+            .addSharedElement(image.first, image.second)
+            .addSharedElement(text.first, text.second)
+            .addSharedElement(description.first, description.second)
             .addToBackStack(null)
             .commit()
     }

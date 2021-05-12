@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.transition.TransitionInflater
 import by.kleban.myapplication.database.entity.Dog
 import com.squareup.picasso.Picasso
 
@@ -19,6 +20,12 @@ class OneDogFragment : Fragment() {
     private lateinit var textTitle:TextView
     private lateinit var imageDog:ImageView
     private lateinit var textDescription:TextView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sharedElementEnterTransition= TransitionInflater.from(requireContext())
+            .inflateTransition(android.R.transition.move)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
