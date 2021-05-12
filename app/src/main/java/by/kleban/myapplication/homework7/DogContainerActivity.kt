@@ -11,7 +11,7 @@ class DogContainerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dog_container)
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container__hw7_dog,  WelcomeDogCatalogFragment())
+            .replace(R.id.fragment_container__hw7_dog, WelcomeDogCatalogFragment())
             .commit()
     }
 }

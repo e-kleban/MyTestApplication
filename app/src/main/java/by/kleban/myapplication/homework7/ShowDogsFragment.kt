@@ -33,7 +33,6 @@ class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
         return inflater.inflate(R.layout.fragment_show_dogs, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.loadAll()

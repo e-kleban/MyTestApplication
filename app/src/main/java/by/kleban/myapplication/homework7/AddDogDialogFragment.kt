@@ -32,17 +32,18 @@ class AddDogDialogFragment : DialogFragment() {
 
     override fun onStart() {
         super.onStart()
+
         val alert = dialog as AlertDialog
         val inputBreed = alert.findViewById<TextInputLayout>(R.id.input_breed_dog)
-        val inputRef= alert.findViewById<TextInputLayout>(R.id.input_ref_dog)
-        val inputDescription=alert.findViewById<TextInputLayout>(R.id.input_description_dog)
+        val inputRef = alert.findViewById<TextInputLayout>(R.id.input_ref_dog)
+        val inputDescription = alert.findViewById<TextInputLayout>(R.id.input_description_dog)
 
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener {
             if (isEmptyOrNull(inputBreed) &&
                 isEmptyOrNull(inputRef) &&
                 isEmptyOrNull(inputDescription)
             ) {
-                val newDog = createDog(inputBreed,inputRef,inputDescription)
+                val newDog = createDog(inputBreed, inputRef, inputDescription)
                 viewModel.addDog(newDog)
                 dismiss()
             }
@@ -57,7 +58,11 @@ class AddDogDialogFragment : DialogFragment() {
         } else true
     }
 
-    private fun createDog(textInputBreed: TextInputLayout?,textInputRef: TextInputLayout?,textInputDescription: TextInputLayout?): Dog {
+    private fun createDog(
+        textInputBreed: TextInputLayout?,
+        textInputRef: TextInputLayout?,
+        textInputDescription: TextInputLayout?
+    ): Dog {
         return Dog(
             textInputBreed?.editText?.text.toString(),
             textInputRef?.editText?.text.toString(),
