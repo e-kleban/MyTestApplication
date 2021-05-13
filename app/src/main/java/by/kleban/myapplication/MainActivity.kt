@@ -9,6 +9,8 @@ import by.kleban.myapplication.homework2.FlagsAnimationActivity
 import by.kleban.myapplication.homework3.BelarusSowingActivity
 import by.kleban.myapplication.homework4.SnowdropStartActivity
 import by.kleban.myapplication.homework5.UserRegistrationActivity
+import by.kleban.myapplication.homework6.CongratulationContainerActivity
+import by.kleban.myapplication.homework7.DogContainerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val buttonDz4 = findViewById<Button>(R.id.dz4)
         val buttonDz5 = findViewById<Button>(R.id.dz5)
         val buttonDz6 = findViewById<Button>(R.id.dz6)
+        val buttonDz7 = findViewById<Button>(R.id.dz7)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, ImageUploadActivity::class.java)
@@ -47,8 +50,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, UserRegistrationActivity::class.java)
             startActivity(intent)
         }
+
         buttonDz6.setOnClickListener {
             val intent = Intent(this, CongratulationContainerActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonDz7.setOnClickListener {
+            val intent = Intent(this, DogContainerActivity::class.java)
             startActivity(intent)
         }
     }
