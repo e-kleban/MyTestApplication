@@ -13,7 +13,7 @@ class CurrencyRepository {
     suspend fun loadCrypto(): List<Crypto.Data> {
         val response = currencyService.loadCrypto()
         return if (response.isSuccessful) {
-             response.body()
+            response.body()
                 ?.data
                 ?.map { cryptoResponseMapper.map(it) }.orEmpty()
         } else {

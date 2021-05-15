@@ -5,7 +5,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -43,10 +42,10 @@ class CryptoCurrencyFragment : Fragment() {
         recycler.adapter = cryptoCurrencyAdapter
 
         cryptoViewModel.cryptoListLiveData.observe(requireActivity()) {
-           cryptoCurrencyAdapter.set(it)
+            cryptoCurrencyAdapter.set(it)
         }
         cryptoViewModel.errorLiveData.observe(requireActivity()) {
-          Toast.makeText(requireContext(), it,Toast.LENGTH_SHORT ).show()
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
         }
         cryptoViewModel.loadListOfCrypto()
 

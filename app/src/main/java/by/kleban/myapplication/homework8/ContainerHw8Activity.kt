@@ -1,8 +1,7 @@
 package by.kleban.myapplication.homework8
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import by.kleban.myapplication.R
 
 class ContainerHw8Activity : AppCompatActivity() {

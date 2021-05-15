@@ -10,7 +10,6 @@ interface CurrencyService {
 
     @Headers("X-CMC_PRO_API_KEY:b6cf6a55-b96d-43f3-a12f-50982ab560ba")
     @GET("v1/cryptocurrency/listings/latest")
-    suspend fun loadCrypto():Response<CryptoResponse>
-
+    suspend fun loadCrypto(): Response<CryptoResponse>
 
 }
