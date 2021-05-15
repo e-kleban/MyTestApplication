@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcomeCryptoFragment"
-        android:name="by.kleban.myapplication.homework8.WelcomeCryptoFragment"
+        android:name="by.kleban.myapplication.WelcomeCryptoFragment"
         android:label="WelcomeCryptoFragment"
         tools:layout="@layout/fragment_welcome_crypto">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/cryptoCurrencyFragment"
-        android:name="by.kleban.myapplication.homework8.CryptoCurrencyFragment"
+        android:name="by.kleban.myapplication.CryptoCurrencyFragment"
         android:label="CryptoCurrencyFragment"
         tools:layout="@layout/fragment_crypto_currency"/>
 </navigation>

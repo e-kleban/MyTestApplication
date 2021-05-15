@@ -11,7 +11,6 @@ import by.kleban.myapplication.homework4.SnowdropStartActivity
 import by.kleban.myapplication.homework5.UserRegistrationActivity
 import by.kleban.myapplication.homework6.CongratulationContainerActivity
 import by.kleban.myapplication.homework7.DogContainerActivity
-import by.kleban.myapplication.homework8.ContainerHw8Activity
 
 class MainActivity : AppCompatActivity() {
 

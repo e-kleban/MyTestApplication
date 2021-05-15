@@ -1,4 +1,4 @@
-package by.kleban.myapplication.homework8
+package by.kleban.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

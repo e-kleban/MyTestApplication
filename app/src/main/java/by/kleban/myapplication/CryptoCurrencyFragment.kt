@@ -1,4 +1,4 @@
-package by.kleban.myapplication.homework8
+package by.kleban.myapplication
 
 import android.os.Bundle
 import android.view.LayoutInflater

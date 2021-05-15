@@ -9,10 +9,12 @@
         style="@style/TextAppearance.MaterialComponents.Headline1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue_200"
+        android:background="#1227A3"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="?homeAsUpIndicator"
-        app:title="CryptoCurrency" />
+        app:navigationIconTint="@color/white"
+        app:title="CryptoCurrency"
+        app:titleTextColor="@color/white" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_crypto_currency"
