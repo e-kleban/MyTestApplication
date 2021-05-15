@@ -1,4 +1,4 @@
-package by.kleban.myapplication.networking.currency
+package by.kleban.myapplication.homework8.networking.currency
 
 import by.kleban.myapplication.BuildConfig
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

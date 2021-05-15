@@ -1,14 +1,14 @@
-package by.kleban.myapplication.mappers.currency
+package by.kleban.myapplication.homework8.mappers.currency
 
-import by.kleban.myapplication.data.dto.currency.CryptoResponse
-import by.kleban.myapplication.data.entities.currency.Crypto
+import by.kleban.myapplication.homework8.data.dto.currency.CryptoResponse
+import by.kleban.myapplication.homework8.data.entities.currency.Crypto
 import com.bignerdranch.android.a1305network.mappers.Mapper
 
 
-class CryptoResponseMapper : Mapper<CryptoResponse, Crypto> {
+class CryptoResponseMapper : Mapper<CryptoResponse.Data, Crypto.Data> {
 
-    override fun map(from: CryptoResponse): Crypto {
-        return Crypto(
+    override fun map(from: CryptoResponse.Data): Crypto.Data {
+        return Crypto.Data(
             dateAdded = from.dateAdded.orEmpty(),
             id = from.id ?: -1,
             lastUpdated = from.lastUpdated.orEmpty(),
@@ -19,14 +19,14 @@ class CryptoResponseMapper : Mapper<CryptoResponse, Crypto> {
         )
     }
 
-    private fun mapQuote(from: CryptoResponse.Quote?): Crypto.Quote {
-        return Crypto.Quote(
+    private fun mapQuote(from: CryptoResponse.Data.Quote?): Crypto.Data.Quote {
+        return Crypto.Data.Quote(
             uSD = mapUSD(from?.uSD)
         )
     }
 
-    private fun mapUSD(from: CryptoResponse.Quote.USD?): Crypto.Quote.USD {
-        return Crypto.Quote.USD(
+    private fun mapUSD(from: CryptoResponse.Data.Quote.USD?): Crypto.Data.Quote.USD {
+        return Crypto.Data.Quote.USD(
             lastUpdated = from?.lastUpdated.orEmpty(),
             marketCap = from?.marketCap ?: 0.0,
             percentChange1h = from?.percentChange1h ?: 0.0,
@@ -36,4 +36,6 @@ class CryptoResponseMapper : Mapper<CryptoResponse, Crypto> {
             volume24h = from?.volume24h ?: 0.0
         )
     }
+
+
 }

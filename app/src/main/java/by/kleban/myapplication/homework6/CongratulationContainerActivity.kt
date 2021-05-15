@@ -1,6 +1,7 @@
 package by.kleban.myapplication.homework6
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import by.kleban.myapplication.R
 
