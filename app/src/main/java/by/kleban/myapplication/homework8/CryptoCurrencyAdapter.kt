@@ -1,15 +1,21 @@
 package by.kleban.myapplication.homework8
 
+import android.content.Context
+import android.content.res.Resources
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import by.kleban.myapplication.R
 import by.kleban.myapplication.homework8.data.entities.currency.Crypto
+import java.util.*
 
 
-class CryptoCurrencyAdapter :
+class CryptoCurrencyAdapter(private val context: Context) :
     RecyclerView.Adapter<CryptoCurrencyAdapter.CryptoCurrencyViewHolder>() {
 
     private val listOfCrypto = mutableListOf<Crypto.Data>()
@@ -29,6 +35,7 @@ class CryptoCurrencyAdapter :
         val crypto = listOfCrypto[position]
         val price = crypto.quote.uSD.price
         val oneHour = crypto.quote.uSD.percentChange1h
+        setBackgroundTint(holder.iconText)
         holder.nameText.text = crypto.name
         holder.iconText.text = crypto.symbol
         holder.priceText.text = String.format("%.3f", price)
@@ -37,6 +44,19 @@ class CryptoCurrencyAdapter :
 
     override fun getItemCount(): Int {
         return listOfCrypto.size
+    }
+
+    private fun setBackgroundTint(textView: TextView) {
+        val colorList = listOf(
+            Color.RED,
+            Color.CYAN,
+            Color.GRAY,
+            Color.GREEN,
+            Color.BLUE,
+            ContextCompat.getColor(context,R.color.blue_200)
+        )
+        val color = Random().nextInt(colorList.size)
+        textView.background.setTint(colorList[color])
     }
 
     inner class CryptoCurrencyViewHolder(view: View) : RecyclerView.ViewHolder(view) {

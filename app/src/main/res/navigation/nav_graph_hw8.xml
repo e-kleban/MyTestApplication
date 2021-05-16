@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_welcome_crypto">
         <action
             android:id="@+id/showCryptoCurrencyFragment"
-            app:destination="@id/cryptoCurrencyFragment" />
+            app:destination="@id/cryptoCurrencyFragment"
+            app:enterAnim="@anim/appear"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/disappear" />
     </fragment>
     <fragment
         android:id="@+id/cryptoCurrencyFragment"

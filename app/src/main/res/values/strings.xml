@@ -50,4 +50,6 @@
     <string name="show_list_of_cards">show list of cards</string>
     <string name="quot_victory_day_cards_quot">"Victory day cards"</string>
     <string name="show">show</string>
+    <string name="welcome">Welcome</string>
+    <string name="today_s">Cryptocurrency Prices by Market Cap today</string>
 </resources>

@@ -28,7 +28,6 @@ class CryptoCurrencyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_crypto_currency, container, false)
-        Log.d("FRAGMENT", "CryptoCurrencyFragment")
         return view
     }
 
@@ -38,7 +37,7 @@ class CryptoCurrencyFragment : Fragment() {
         val recycler = view.findViewById<RecyclerView>(R.id.recycler_crypto_currency)
         recycler.layoutManager = LinearLayoutManager(requireContext())
 
-        cryptoCurrencyAdapter = CryptoCurrencyAdapter()
+        cryptoCurrencyAdapter = CryptoCurrencyAdapter(requireContext())
         recycler.adapter = cryptoCurrencyAdapter
 
         cryptoViewModel.cryptoListLiveData.observe(requireActivity()) {

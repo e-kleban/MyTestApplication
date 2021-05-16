@@ -27,6 +27,5 @@ class WelcomeCryptoFragment : Fragment() {
         buttonShow.setOnClickListener {
             findNavController().navigate(R.id.showCryptoCurrencyFragment)
         }
-
     }
 }
