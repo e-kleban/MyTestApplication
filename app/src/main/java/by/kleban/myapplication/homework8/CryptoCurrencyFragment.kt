@@ -1,10 +1,10 @@
 package by.kleban.myapplication.homework8
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -21,6 +21,7 @@ class CryptoCurrencyFragment : Fragment() {
         ViewModelProvider(requireActivity()).get(CryptoViewModel::class.java)
     }
     private lateinit var cryptoCurrencyAdapter: CryptoCurrencyAdapter
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +34,12 @@ class CryptoCurrencyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        progressBar = view.findViewById(R.id.progress_bar)
+        cryptoViewModel.isLoadingLiveData.observe(requireActivity()) {
+            if (it) progressBar.visibility = View.VISIBLE
+            else progressBar.visibility = View.GONE
+        }
 
         val recycler = view.findViewById<RecyclerView>(R.id.recycler_crypto_currency)
         recycler.layoutManager = LinearLayoutManager(requireContext())

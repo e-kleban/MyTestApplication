@@ -21,10 +21,15 @@ class CryptoViewModel : ViewModel() {
     private val _errorLiveData = MutableLiveData<String>()
     val errorLiveData: LiveData<String> = _errorLiveData
 
+    private val _isLoadingLiveData = MutableLiveData<Boolean>()
+    val isLoadingLiveData: LiveData<Boolean> = _isLoadingLiveData
+
     fun loadListOfCrypto() {
+        _isLoadingLiveData.value = true
         ioScope.launch {
             try {
                 _cryptoListLiveData.postValue(cryptoRepository.loadCrypto())
+                _isLoadingLiveData.postValue(false)
             } catch (e: Exception) {
                 _errorLiveData.postValue(e.message)
             }

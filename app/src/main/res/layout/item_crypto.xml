@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
     android:background="#EBF1F4">
 
     <TextView
         android:id="@+id/item_icon_crypto"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_margin="16dp"
         android:background="@drawable/round"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/line"
         app:layout_constraintEnd_toStartOf="@id/item_name_crypto"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,13 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_size_24sp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintBottom_toTopOf="@id/item_price_crypto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/item_icon_crypto"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="Bitcoin" />
 
     <TextView
@@ -54,8 +53,6 @@
         android:id="@+id/item_one_hour_crypto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
         android:textColor="@color/red"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,12 +64,12 @@
     <View
         android:id="@+id/line"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="8dp"
         android:background="@color/blue_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/item_one_hour_crypto" />
 
 
