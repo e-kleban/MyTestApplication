@@ -1,6 +1,7 @@
 package by.kleban.myapplication.homework6
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,7 +27,6 @@ class WelcomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val textVictory = view.findViewById<TextView>(R.id.txt_welcome_name_day)
 
         textVictory.doOnPreDraw {

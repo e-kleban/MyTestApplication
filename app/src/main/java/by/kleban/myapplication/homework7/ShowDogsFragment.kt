@@ -49,6 +49,10 @@ class ShowDogsFragment : Fragment(), DogsShowAdapter.OnItemClickListener {
             myAdapter.setItems(it)
         }
 
+        toolbar.setNavigationOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+        }
+
         toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.addDog -> {
