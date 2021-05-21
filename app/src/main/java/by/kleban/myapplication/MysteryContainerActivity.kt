@@ -13,6 +13,7 @@ class MysteryContainerActivity:AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.mystery_fragment_container,WelcomeMysteryFragment())
+            .addToBackStack(null)
             .commit()
     }
 }
