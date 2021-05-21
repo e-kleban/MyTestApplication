@@ -33,8 +33,8 @@ class MysteryTimerFragment : Fragment() {
             txtTimer.text = it.toString()
         }
 
-        viewModel.isFinishedTimerLiveData.observe(requireActivity()) {
-            if (it==false) {
+        viewModel.isFinishedTimerLiveData.observe(requireActivity()) { it ->
+            if (it == false) {
                 txtTimer.visibility = View.VISIBLE
             } else {
                 txtTimer.visibility = View.GONE

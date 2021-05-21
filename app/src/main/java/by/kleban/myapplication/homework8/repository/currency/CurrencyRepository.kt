@@ -15,7 +15,8 @@ class CurrencyRepository {
         return if (response.isSuccessful) {
             response.body()
                 ?.data
-                ?.map { cryptoResponseMapper.map(it) }.orEmpty()
+                ?.map {
+                    cryptoResponseMapper.map(it) }.orEmpty()
         } else {
             throw Throwable(response.errorBody().toString())
         }
