@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 
 class WelcomeMysteryFragment : Fragment() {
 
-    private lateinit var startButton:Button
+    private lateinit var startButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,11 +23,12 @@ class WelcomeMysteryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        startButton= view.findViewById(R.id.btn_mystery_welcome)
+        startButton = view.findViewById(R.id.btn_mystery_welcome)
         startButton.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.mystery_fragment_container,MysteryTimerFragment())
+                .addToBackStack(null)
+                .replace(R.id.mystery_fragment_container, MysteryTimerFragment())
                 .commit()
         }
     }

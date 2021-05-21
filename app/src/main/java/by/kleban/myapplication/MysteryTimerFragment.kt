@@ -43,4 +43,10 @@ class MysteryTimerFragment : Fragment() {
 
         viewModel.startTimer()
     }
+
+    override fun onStop() {
+        super.onStop()
+        viewModel.stopTimer()
+
+    }
 }
