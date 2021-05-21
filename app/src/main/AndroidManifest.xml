@@ -29,6 +29,7 @@
         <activity android:name=".homework5.UserRegistrationActivity" />
         <activity android:name=".homework5.WelcomeActivity" />
         <activity android:name=".homework7.DogContainerActivity" />
+        <activity android:name=".MysteryContainerActivity"/>
     </application>
 
 </manifest>

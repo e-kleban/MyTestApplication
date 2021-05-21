@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val buttonDz6 = findViewById<Button>(R.id.dz6)
         val buttonDz7 = findViewById<Button>(R.id.dz7)
         val buttonDz8 = findViewById<Button>(R.id.dz8)
+        val buttonDz9 = findViewById<Button>(R.id.dz9)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, ImageUploadActivity::class.java)
@@ -65,6 +66,11 @@ class MainActivity : AppCompatActivity() {
 
         buttonDz8.setOnClickListener {
             val intent = Intent(this, ContainerHw8Activity::class.java)
+            startActivity(intent)
+        }
+
+        buttonDz9.setOnClickListener {
+            val intent = Intent(this, MysteryContainerActivity::class.java)
             startActivity(intent)
         }
     }

@@ -52,4 +52,7 @@
     <string name="show">show</string>
     <string name="welcome">Welcome</string>
     <string name="today_s">Cryptocurrency Prices by Market Cap today</string>
+    <string name="if_you_aren_t_afraid_to_start_click_button_below">If you aren\'t afraid to start, click button below</string>
+    <string name="welcome_to_mystery_app">Welcome to MYSTERY APP</string>
+    <string name="start">start</string>
 </resources>
