@@ -1,6 +1,6 @@
-package by.kleban.networking.advice
+package by.kleban.myapplication.homework9.networking.advice
 
-import by.kleban.data.dto.advice.AdviceResponse
+import by.kleban.myapplication.homework9.data.dto.advice.AdviceResponse
 import retrofit2.Response
 import retrofit2.http.GET
 

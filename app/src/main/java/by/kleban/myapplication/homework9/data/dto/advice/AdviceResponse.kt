@@ -1,4 +1,4 @@
-package by.kleban.data.dto.advice
+package by.kleban.myapplication.homework9.data.dto.advice
 
 
 import com.google.gson.annotations.SerializedName

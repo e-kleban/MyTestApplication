@@ -1,4 +1,4 @@
-package by.kleban.networking.advice
+package by.kleban.myapplication.homework9.networking.advice
 
 import by.kleban.myapplication.BuildConfig
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

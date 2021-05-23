@@ -1,5 +1,6 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework9
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import by.kleban.myapplication.R
 
 
 class MysteryTimerFragment : Fragment() {
@@ -29,19 +31,24 @@ class MysteryTimerFragment : Fragment() {
 
         txtTimer = view.findViewById(R.id.txt_mystery_timer)
 
-        viewModel.timerLiveData.observe(requireActivity()) {
+        viewModel.timerLiveData.observe(viewLifecycleOwner) {
             txtTimer.text = it.toString()
         }
+        viewModel.startTimer()
 
-        viewModel.isFinishedTimerLiveData.observe(requireActivity()) { it ->
-            if (it == false) {
+        viewModel.adviceLiveData.observe(viewLifecycleOwner) { it ->
+            if (it == null) {
                 txtTimer.visibility = View.VISIBLE
             } else {
                 txtTimer.visibility = View.GONE
+                val intentService = Intent(requireContext(), MyForegroundService::class.java)
+                intentService.putExtra(
+                    MyForegroundService.EXTRA_STRING,
+                    viewModel.adviceLiveData.value
+                )
+                requireActivity().startService(intentService)
             }
         }
-
-        viewModel.startTimer()
     }
 
     override fun onStop() {

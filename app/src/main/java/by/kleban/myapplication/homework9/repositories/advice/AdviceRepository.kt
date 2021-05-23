@@ -1,8 +1,6 @@
-package by.kleban.repositories.advice
+package by.kleban.myapplication.homework9.repositories.advice
 
-import by.kleban.networking.advice.AdviceServiceProvider
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import by.kleban.myapplication.homework9.networking.advice.AdviceServiceProvider
 
 
 class AdviceRepository {

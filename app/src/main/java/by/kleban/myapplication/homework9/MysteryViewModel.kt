@@ -1,10 +1,10 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework9
 
 import android.os.CountDownTimer
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import by.kleban.repositories.advice.AdviceRepository
+import by.kleban.myapplication.homework9.repositories.advice.AdviceRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,7 +24,12 @@ class MysteryViewModel : ViewModel() {
     val isFinishedTimerLiveData: LiveData<Boolean>
         get() = _isFinishedTimerLiveData
 
+    private val _adviceLiveData = MutableLiveData<String?>()
+    val adviceLiveData: LiveData<String?>
+        get() = _adviceLiveData
+
     fun startTimer() {
+        _adviceLiveData.value = null
         timer = object : CountDownTimer(10000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 _timerLiveData.value = (millisUntilFinished.toInt().div(1000))
@@ -41,10 +46,6 @@ class MysteryViewModel : ViewModel() {
     fun stopTimer() {
         timer.cancel()
     }
-
-    private val _adviceLiveData = MutableLiveData<String>()
-    val adviceLiveData: LiveData<String>
-        get() = _adviceLiveData
 
     private fun loadAdvice() {
         ioScope.launch {

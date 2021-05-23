@@ -1,10 +1,11 @@
-package by.kleban.myapplication
+package by.kleban.myapplication.homework9
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import by.kleban.myapplication.R
 
 
-class MysteryContainerActivity:AppCompatActivity() {
+class MysteryContainerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -12,8 +13,7 @@ class MysteryContainerActivity:AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.mystery_fragment_container,WelcomeMysteryFragment())
-            .addToBackStack(null)
+            .replace(R.id.mystery_fragment_container, WelcomeMysteryFragment())
             .commit()
     }
 }
