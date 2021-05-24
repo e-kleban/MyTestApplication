@@ -32,7 +32,6 @@ class MyForegroundService : Service() {
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setCategory(Notification.CATEGORY_SERVICE)
             .setStyle(NotificationCompat.BigTextStyle())
-            .setContentIntent(pendingIntent)
             .addAction(R.drawable.ic_baseline_compost_24,"open",pendingIntent)
             .build()
 
