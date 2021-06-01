@@ -25,7 +25,7 @@ class MyDbHw7Test {
     }
 
     @Test
-    fun insertDog_returnTrue() {
+    fun insertDog_dogInserted() {
         val dog1 = Dog("Poodle", "https/.....1", "Good breed for game and happy life")
 
         runBlocking {
@@ -36,7 +36,7 @@ class MyDbHw7Test {
     }
 
     @Test
-    fun deleteDog_returnTrue() {
+    fun deleteDog_dogDeleted() {
         val dog1 = Dog("Poodle", "https/.....1", "Good breed for game and happy life")
         val breedDog1 = dog1.breed
 
@@ -60,7 +60,7 @@ class MyDbHw7Test {
         runBlocking {
             dogDao.insertDog(dog1)
             dogDao.insertDog(dog2)
-//            dogDao.insertDog(dog3)
+            dogDao.insertDog(dog3)
             dogDao.insertDog(dog4)
             val listDb = dogDao.getAll()
 
@@ -69,7 +69,7 @@ class MyDbHw7Test {
     }
 
     @Test
-    fun updateDog() {
+    fun updateDog_dogUpdated() {
         val dog1 = Dog(
             breed = "Poodle",
             ref = "https/.....1",
@@ -89,7 +89,12 @@ class MyDbHw7Test {
             updateDog.id = dog1Id
             dogDao.update(updateDog)
             val updateDogListDb = dogDao.getAll()
-            Truth.assertThat(updateDogListDb).isNotEqualTo(listDogDb)
+            val updateDbDog = updateDogListDb.first()
+            Truth.assertThat(
+                updateDbDog.breed == updateDog.breed &&
+                        updateDbDog.description == updateDog.description &&
+                        updateDbDog.ref == updateDog.ref
+            ).isTrue()
         }
     }
 }
