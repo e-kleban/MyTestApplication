@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import by.kleban.myapplication.homework1.ImageUploadActivity
-import by.kleban.myapplication.homework11.CountryHolidayActivity
+import by.kleban.myapplication.homework11.CountryContainerActivity
+import by.kleban.myapplication.homework11.CountryHolidayFragment
 import by.kleban.myapplication.homework2.FlagsAnimationActivity
 import by.kleban.myapplication.homework3.BelarusSowingActivity
 import by.kleban.myapplication.homework4.SnowdropStartActivity
@@ -78,7 +79,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonDz11.setOnClickListener {
-            val intent = Intent(this, CountryHolidayActivity::class.java)
+            val intent = Intent(this, CountryContainerActivity::class.java)
             startActivity(intent)
         }
     }
