@@ -11,7 +11,7 @@ data class CountriesResponse(
         @SerializedName("code")
         val countryCode: String?,
         @SerializedName("name")
-        val name: String?,
+        val countryName: String?,
     )
 
 }

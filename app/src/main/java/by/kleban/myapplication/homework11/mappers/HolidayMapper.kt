@@ -11,7 +11,7 @@ class HolidayMapper : Mapper<CountryHolidayResponse.HolidayResponse, Holiday> {
         return Holiday(
             countryCode = from.countryCode.orEmpty(),
             date = from.date.orEmpty(),
-            name = from.name.orEmpty()
+            holidayName = from.holidayName.orEmpty()
         )
     }
 }

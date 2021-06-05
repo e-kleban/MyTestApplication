@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import by.kleban.myapplication.homework1.ImageUploadActivity
+import by.kleban.myapplication.homework11.CountryHolidayActivity
 import by.kleban.myapplication.homework2.FlagsAnimationActivity
 import by.kleban.myapplication.homework3.BelarusSowingActivity
 import by.kleban.myapplication.homework4.SnowdropStartActivity
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val buttonDz7 = findViewById<Button>(R.id.dz7)
         val buttonDz8 = findViewById<Button>(R.id.dz8)
         val buttonDz9 = findViewById<Button>(R.id.dz9)
+        val buttonDz11 = findViewById<Button>(R.id.dz11)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, ImageUploadActivity::class.java)
@@ -72,6 +74,11 @@ class MainActivity : AppCompatActivity() {
 
         buttonDz9.setOnClickListener {
             val intent = Intent(this, MysteryContainerActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonDz11.setOnClickListener {
+            val intent = Intent(this, CountryHolidayActivity::class.java)
             startActivity(intent)
         }
     }

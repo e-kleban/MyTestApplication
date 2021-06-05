@@ -13,6 +13,6 @@ data class CountryHolidayResponse(
         @SerializedName("date")
         val date: String?,
         @SerializedName("name")
-        val name: String?,
+        val holidayName: String?,
     )
 }

@@ -9,8 +9,8 @@ class CountryMapper : Mapper<CountriesResponse.CountryResponse, Country> {
 
     override fun map(from: CountriesResponse.CountryResponse): Country {
         return Country(
-            code = from.code.orEmpty(),
-            name = from.name.orEmpty()
+            countryCode = from.countryCode.orEmpty(),
+            countryName = from.countryName.orEmpty()
         )
     }
 }
