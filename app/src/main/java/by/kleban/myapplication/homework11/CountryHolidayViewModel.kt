@@ -7,6 +7,7 @@ import by.kleban.myapplication.homework11.data.entities.CountryWithHoliday
 import by.kleban.myapplication.homework11.mappers.CountryWithHolidayMapper
 import by.kleban.myapplication.homework11.repository.CountryHolidayRepository
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.time.LocalDateTime
 
@@ -18,6 +19,7 @@ class CountryHolidayViewModel : ViewModel() {
     private val date = LocalDateTime.now()
     private val month = date.month.value
     private val day = date.dayOfMonth
+    private val disposables = CompositeDisposable()
 
     private val _countryListLiveData = MutableLiveData<List<CountryWithHoliday>>()
     val countryListLiveData: LiveData<List<CountryWithHoliday>>
@@ -36,7 +38,7 @@ class CountryHolidayViewModel : ViewModel() {
         get() = _isLoadingCountryLiveData
 
     init {
-        repository.loadCountries()
+        val disposable = repository.loadCountries()
             .subscribeOn(Schedulers.io())
             .flattenAsObservable { it }
             .map { mapper.map(it) }
@@ -64,5 +66,11 @@ class CountryHolidayViewModel : ViewModel() {
                     _isLoadingCountryLiveData.value = false
                     _errorLiveData.value = it.message
                 })
+        disposables.add(disposable)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposables.clear()
     }
 }
