@@ -9,6 +9,7 @@
     <string name="dz7">homework7</string>
     <string name="dz8">homework8</string>
     <string name="dz9">homework9</string>
+    <string name="dz11">homework11</string>
     <string name="button_upload_image">Upload image</string>
     <string name="hint_input_URL">Input URL</string>
     <string name="button_flags">Flags</string>
@@ -59,4 +60,5 @@
     <string name="if_you_are_really_very_brave_please_click_button_below">if you are really very brave,please, click button below</string>
     <string name="you_are_brave">You are brave...</string>
     <string name="congratulations">Congratulations!!!</string>
+    <string name="we_are_pleased_to_present_you_a_list_of">We are pleased to present you a list of countries with the upcoming holiday in each of the countries.</string>
 </resources>
